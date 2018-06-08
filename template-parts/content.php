@@ -20,7 +20,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content clearfix">
-		<?php the_content( esc_html__( 'Continue reading &raquo;', 'chronus' ) ); ?>
+		<?php the_content( esc_html( chronus_get_option( 'read_more_text' ) ) ); ?>
 	</div><!-- .entry-content -->
 
 </article>

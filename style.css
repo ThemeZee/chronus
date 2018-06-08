@@ -1216,6 +1216,10 @@ article,
 	font-weight: bold;
 }
 
+.more-link:after {
+	content: " \00BB";
+}
+
 /* Page Links | wp_link_pages() */
 .page-links {
 	clear: both;

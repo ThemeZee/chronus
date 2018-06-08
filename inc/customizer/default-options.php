@@ -56,6 +56,7 @@ function chronus_default_options() {
 		'blog_title'            => '',
 		'blog_description'      => '',
 		'excerpt_length'        => 35,
+		'read_more_text'        => esc_html__( 'Continue reading', 'chronus' ),
 		'blog_magazine_widgets' => true,
 		'meta_date'             => true,
 		'meta_author'           => true,
