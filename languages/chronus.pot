@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chronus\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2017-07-25 13:44+0200\n"
+"POT-Creation-Date: 2018-06-09 13:05+0200\n"
 "PO-Revision-Date: 2016-09-15 21:02+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
@@ -178,6 +178,11 @@ msgstr ""
 msgid "Rate this theme"
 msgstr ""
 
+#: inc/customizer/default-options.php:59
+#: inc/customizer/sections/customizer-blog.php:117
+msgid "Continue reading"
+msgstr ""
+
 #: inc/customizer/sections/customizer-blog.php:19
 msgid "Blog Settings"
 msgstr ""
@@ -186,24 +191,36 @@ msgstr ""
 msgid "Blog Title"
 msgstr ""
 
-#: inc/customizer/sections/customizer-blog.php:54
+#: inc/customizer/sections/customizer-blog.php:55
 msgid "Blog Description"
 msgstr ""
 
-#: inc/customizer/sections/customizer-blog.php:75
+#: inc/customizer/sections/customizer-blog.php:77
 msgid "Blog Layout"
 msgstr ""
 
-#: inc/customizer/sections/customizer-blog.php:81
+#: inc/customizer/sections/customizer-blog.php:83
 msgid "Display full posts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-blog.php:82
+#: inc/customizer/sections/customizer-blog.php:84
 msgid "Display post excerpts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-blog.php:95
+#: inc/customizer/sections/customizer-blog.php:97
 msgid "Excerpt Length"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:124
+msgid "Read More Text"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:134
+msgid "Magazine Widgets"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:150
+msgid "Display Magazine widgets on blog index"
 msgstr ""
 
 #: inc/customizer/sections/customizer-featured.php:19
@@ -286,13 +303,13 @@ msgstr ""
 msgid "More Features"
 msgstr ""
 
-#: inc/magazine.php:39
+#: inc/magazine.php:44
 msgid ""
 "Please go to Customize &#8594; Widgets and add at least one widget to the "
 "Magazine Homepage widget area."
 msgstr ""
 
-#: inc/magazine.php:60
+#: inc/magazine.php:65
 #, php-format
 msgid "View all posts from category %s"
 msgstr ""
@@ -328,36 +345,32 @@ msgstr ""
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:302 template-parts/content.php:23
-msgid "Continue reading &raquo;"
-msgstr ""
-
-#: inc/template-tags.php:318
+#: inc/template-tags.php:324
 msgctxt "post navigation"
 msgid "Previous Post"
 msgstr ""
 
-#: inc/template-tags.php:319
+#: inc/template-tags.php:325
 msgctxt "post navigation"
 msgid "Next Post"
 msgstr ""
 
-#: inc/template-tags.php:372
+#: inc/template-tags.php:378
 msgctxt "pagination"
 msgid "Previous Posts"
 msgstr ""
 
-#: inc/template-tags.php:373
+#: inc/template-tags.php:379
 msgctxt "pagination"
 msgid "Next Posts"
 msgstr ""
 
-#: inc/template-tags.php:387
+#: inc/template-tags.php:393
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
 
-#: inc/template-tags.php:388
+#: inc/template-tags.php:394
 msgid "http://wordpress.org"
 msgstr ""
 
