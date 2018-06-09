@@ -111,7 +111,7 @@ function chronus_customize_partial_blogdescription() {
  * Embed JS file to make Theme Customizer preview reload changes asynchronously.
  */
 function chronus_customize_preview_js() {
-	wp_enqueue_script( 'chronus-customize-preview', get_template_directory_uri() . '/assets/js/customize-preview.js', array( 'customize-preview' ), '20170627', true );
+	wp_enqueue_script( 'chronus-customize-preview', get_template_directory_uri() . '/assets/js/customize-preview.js', array( 'customize-preview' ), '20180609', true );
 }
 add_action( 'customize_preview_init', 'chronus_customize_preview_js' );
 
@@ -120,7 +120,7 @@ add_action( 'customize_preview_init', 'chronus_customize_preview_js' );
  * Embed JS for Customizer Controls.
  */
 function chronus_customizer_controls_js() {
-	wp_enqueue_script( 'chronus-customizer-controls', get_template_directory_uri() . '/assets/js/customizer-controls.js', array(), '20170627', true );
+	wp_enqueue_script( 'chronus-customizer-controls', get_template_directory_uri() . '/assets/js/customizer-controls.js', array(), '20180609', true );
 }
 add_action( 'customize_controls_enqueue_scripts', 'chronus_customizer_controls_js' );
 
@@ -129,7 +129,7 @@ add_action( 'customize_controls_enqueue_scripts', 'chronus_customizer_controls_j
  * Embed CSS styles Customizer Controls.
  */
 function chronus_customizer_controls_css() {
-	wp_enqueue_style( 'chronus-customizer-controls', get_template_directory_uri() . '/assets/css/customizer-controls.css', array(), '20170627' );
+	wp_enqueue_style( 'chronus-customizer-controls', get_template_directory_uri() . '/assets/css/customizer-controls.css', array(), '20180609' );
 }
 add_action( 'customize_controls_print_styles', 'chronus_customizer_controls_css' );
 
