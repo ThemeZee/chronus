@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/chronus/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Chronus is a fast and lightweight WordPress Theme created for magazines, news websites and personal blogs. The Featured Content section and flexible Magazine Widgets give you the ability to highlight your most important posts on the home page. The minimalistic and responsive design focuses on your content and looks great on any screen size.
-Version: 1.4
+Version: 1.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: chronus
@@ -155,10 +155,6 @@ figure {
 hr {
 	box-sizing: content-box;
 	height: 0;
-}
-
-pre {
-	overflow: auto;
 }
 
 code,
@@ -338,10 +334,11 @@ address {
 
 pre {
 	overflow: auto;
-	margin-bottom: 1.6em;
-	padding: 1.6em;
+	margin-bottom: 1.5em;
+	padding: 1.5em;
 	max-width: 100%;
 	border: 1px solid rgba(0,0,0,0.075);
+	background: none;
 	font-size: 15px;
 	font-size: 0.9375rem;
 	font-family: "Courier 10 Pitch", Courier, monospace;
@@ -1189,6 +1186,10 @@ article,
 .sticky {
 	padding-bottom: 2em;
 	border-bottom: 1px solid rgba(0,0,0,0.075);
+}
+
+.entry-content a {
+	text-decoration: underline;
 }
 
 /* Read more Link */

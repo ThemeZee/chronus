@@ -50,6 +50,21 @@ body.block-editor-page .edit-post-visual-editor .editor-block-list__block {
 	margin-bottom: 1.5em;
 }
 
+.edit-post-visual-editor .editor-block-list__block a {
+    color: #cc5555;
+}
+
+.edit-post-visual-editor .editor-block-list__block pre {
+	overflow: auto;
+	padding: 1.5em;
+	border: 1px solid rgba(0,0,0,0.075);
+	background: none;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	line-height: 1.6;
+}
+
 .edit-post-visual-editor .editor-block-list__block h1,
 .edit-post-visual-editor .editor-block-list__block h2,
 .edit-post-visual-editor .editor-block-list__block h3,

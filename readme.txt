@@ -26,6 +26,11 @@ For more information about Chronus please go to https://themezee.com/themes/chro
 
 == Changelog ==
 
+= 1.5 =
+* added styling for Gutenberg blocks
+* added custom color palette for Gutenberg
+* added editor styling for WordPress 5.0
+
 = 1.4 =
 * added new setting to change the text of the Read More button
 * improved styling of checkbox labels in comment form
