@@ -390,10 +390,12 @@ function chronus_credit_link() {
 	?>
 
 	<span class="credit-link">
-		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'chronus' ),
-			'<a href="' . esc_url( __( 'http://wordpress.org', 'chronus' ) ) . '" title="WordPress">WordPress</a>',
+		<?php
+		// translators: Theme Name
+		printf( esc_html__( 'WordPress Theme: %s by ThemeZee.', 'chronus' ),
 			'<a href="https://themezee.com/themes/chronus/" title="Chronus WordPress Theme">Chronus</a>'
-		); ?>
+		);
+		?>
 	</span>
 
 	<?php
