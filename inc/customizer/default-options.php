@@ -67,6 +67,7 @@ function chronus_default_options() {
 		'post_image_single'     => true,
 		'featured_posts'        => false,
 		'featured_category'     => 0,
+		'credit_link'           => true,
 	);
 
 	return $default_options;

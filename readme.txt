@@ -26,6 +26,9 @@ For more information about Chronus please go to https://themezee.com/themes/chro
 
 == Changelog ==
 
+= 1.5.3 =
+* improved implementation of footer credit link
+
 = 1.5.2 =
 * added support for responsive embed blocks
 

@@ -387,16 +387,19 @@ endif;
  * Displays credit link on footer line
  */
 function chronus_credit_link() {
-	?>
-
-	<span class="credit-link">
-		<?php
-		// translators: Theme Name
-		printf( esc_html__( 'WordPress Theme: %s by ThemeZee.', 'chronus' ),
-			'<a href="https://themezee.com/themes/chronus/" title="Chronus WordPress Theme">Chronus</a>'
-		);
+	if ( true === chronus_get_option( 'credit_link' ) || is_customize_preview() ) :
 		?>
-	</span>
 
-	<?php
+		<span class="credit-link">
+			<?php
+			// translators: Theme Name and Link to ThemeZee.
+			printf( esc_html__( 'WordPress Theme: %1$s by %2$s.', 'chronus' ),
+				esc_html__( 'Chronus', 'chronus' ),
+				'<a href="https://themezee.com/" target="_blank" rel="nofollow">ThemeZee</a>'
+			);
+			?>
+		</span>
+
+		<?php
+	endif;
 }
