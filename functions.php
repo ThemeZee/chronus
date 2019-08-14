@@ -219,6 +219,19 @@ add_action( 'after_setup_theme', 'chronus_add_image_sizes' );
 
 
 /**
+ * Make custom image sizes available in Gutenberg.
+ */
+function chronus_add_image_size_names( $sizes ) {
+	return array_merge( $sizes, array(
+		'post-thumbnail'          => esc_html__( 'Chronus Single Post', 'chronus' ),
+		'chronus-thumbnail-large' => esc_html__( 'Chronus Magazine Post', 'chronus' ),
+		'chronus-thumbnail-small' => esc_html__( 'Chronus Thumbnail', 'chronus' ),
+	) );
+}
+add_filter( 'image_size_names_choose', 'chronus_add_image_size_names' );
+
+
+/**
  * Add pingback url on single posts
  */
 function chronus_pingback_url() {
