@@ -47,7 +47,8 @@ function chronus_theme_info_page() {
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/chronus/', 'chronus' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=chronus&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'chronus' ); ?></a>
 				<a href="http://preview.themezee.com/?demo=chronus&utm_source=theme-info&utm_campaign=chronus" target="_blank"><?php esc_html_e( 'Theme Demo', 'chronus' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/chronus-documentation/', 'chronus' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=chronus&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'chronus' ); ?></a>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/chronus/reviews/?filter=5', 'chronus' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'chronus' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/changelogs/?action=themezee-changelog&type=theme&slug=chronus', 'chronus' ) ); ?>" target="_blank"><?php esc_html_e( 'Theme Changelog', 'chronus' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/chronus/reviews/', 'chronus' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'chronus' ); ?></a>
 			</p>
 		</div>
 		<hr>
@@ -149,7 +150,7 @@ function chronus_theme_info_page() {
 			<p><?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'chronus' ),
 				$theme->display( 'Name' ),
 				'<a target="_blank" href="' . __( 'https://themezee.com/', 'chronus' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=chronus" title="ThemeZee">ThemeZee</a>',
-				'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/chronus/reviews/?filter=5', 'chronus' ) . '" title="' . esc_attr__( 'Review Chronus', 'chronus' ) . '">' . esc_html__( 'rate it', 'chronus' ) . '</a>'); ?>
+				'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/chronus/reviews/', 'chronus' ) . '" title="' . esc_attr__( 'Review Chronus', 'chronus' ) . '">' . esc_html__( 'rate it', 'chronus' ) . '</a>'); ?>
 			</p>
 
 		</div>

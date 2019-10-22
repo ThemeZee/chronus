@@ -43,13 +43,13 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				</p>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/chronus/', 'chronus' ) ); ?>" target="_blank">
-						<?php esc_html_e( 'Support Forum', 'chronus' ); ?>
+					<a href="<?php echo esc_url( __( 'https://themezee.com/changelogs/?action=themezee-changelog&type=theme&slug=chronus/', 'chronus' ) ); ?>" target="_blank">
+						<?php esc_html_e( 'Theme Changelog', 'chronus' ); ?>
 					</a>
 				</p>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/chronus/reviews/?filter=5', 'chronus' ) ); ?>" target="_blank">
+					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/chronus/reviews/', 'chronus' ) ); ?>" target="_blank">
 						<?php esc_html_e( 'Rate this theme', 'chronus' ); ?>
 					</a>
 				</p>
