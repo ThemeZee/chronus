@@ -11,7 +11,9 @@ require( get_template_directory() . '/inc/customizer/sanitize-functions.php' );
 // Load Custom Controls.
 require( get_template_directory() . '/inc/customizer/controls/category-dropdown-control.php' );
 require( get_template_directory() . '/inc/customizer/controls/headline-control.php' );
+require( get_template_directory() . '/inc/customizer/controls/links-control.php' );
 require( get_template_directory() . '/inc/customizer/controls/magazine-widget-area-control.php' );
+require( get_template_directory() . '/inc/customizer/controls/plugin-control.php' );
 require( get_template_directory() . '/inc/customizer/controls/upgrade-control.php' );
 
 // Load Customizer Sections.
@@ -20,7 +22,7 @@ require( get_template_directory() . '/inc/customizer/sections/customizer-blog.ph
 require( get_template_directory() . '/inc/customizer/sections/customizer-post.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-magazine.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-featured.php' );
-require( get_template_directory() . '/inc/customizer/sections/customizer-upgrade.php' );
+require( get_template_directory() . '/inc/customizer/sections/customizer-info.php' );
 
 /**
  * Registers Theme Options panel and sets up some WordPress core settings
@@ -35,16 +37,15 @@ function chronus_customize_register_options( $wp_customize ) {
 		'capability'     => 'edit_theme_options',
 		'theme_supports' => '',
 		'title'          => esc_html__( 'Theme Options', 'chronus' ),
-		'description'    => chronus_customize_theme_links(),
 	) );
 
 	// Change default background section.
-	$wp_customize->get_control( 'background_color' )->section   = 'background_image';
-	$wp_customize->get_section( 'background_image' )->title     = esc_html__( 'Background', 'chronus' );
+	$wp_customize->get_control( 'background_color' )->section = 'background_image';
+	$wp_customize->get_section( 'background_image' )->title   = esc_html__( 'Background', 'chronus' );
 
 	// Add postMessage support for site title and description.
-	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
 	// Add selective refresh for site title and description.
 	$wp_customize->selective_refresh->add_partial( 'blogname', array(
@@ -111,7 +112,7 @@ function chronus_customize_partial_blogdescription() {
  * Embed JS file to make Theme Customizer preview reload changes asynchronously.
  */
 function chronus_customize_preview_js() {
-	wp_enqueue_script( 'chronus-customize-preview', get_template_directory_uri() . '/assets/js/customize-preview.js', array( 'customize-preview' ), '20180609', true );
+	wp_enqueue_script( 'chronus-customize-preview', get_template_directory_uri() . '/assets/js/customize-preview.js', array( 'customize-preview' ), '20191022', true );
 }
 add_action( 'customize_preview_init', 'chronus_customize_preview_js' );
 
@@ -120,7 +121,7 @@ add_action( 'customize_preview_init', 'chronus_customize_preview_js' );
  * Embed JS for Customizer Controls.
  */
 function chronus_customizer_controls_js() {
-	wp_enqueue_script( 'chronus-customizer-controls', get_template_directory_uri() . '/assets/js/customizer-controls.js', array(), '20180609', true );
+	wp_enqueue_script( 'chronus-customizer-controls', get_template_directory_uri() . '/assets/js/customizer-controls.js', array(), '20191022', true );
 }
 add_action( 'customize_controls_enqueue_scripts', 'chronus_customizer_controls_js' );
 
@@ -129,51 +130,6 @@ add_action( 'customize_controls_enqueue_scripts', 'chronus_customizer_controls_j
  * Embed CSS styles Customizer Controls.
  */
 function chronus_customizer_controls_css() {
-	wp_enqueue_style( 'chronus-customizer-controls', get_template_directory_uri() . '/assets/css/customizer-controls.css', array(), '20180609' );
+	wp_enqueue_style( 'chronus-customizer-controls', get_template_directory_uri() . '/assets/css/customizer-controls.css', array(), '20191022' );
 }
 add_action( 'customize_controls_print_styles', 'chronus_customizer_controls_css' );
-
-/**
- * Returns Theme Links
- */
-function chronus_customize_theme_links() {
-
-	ob_start();
-	?>
-
-		<div class="theme-links">
-
-			<span class="customize-control-title"><?php esc_html_e( 'Theme Links', 'chronus' ); ?></span>
-
-			<p>
-				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/chronus/', 'chronus' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=chronus&utm_content=theme-page" target="_blank">
-					<?php esc_html_e( 'Theme Page', 'chronus' ); ?>
-				</a>
-			</p>
-
-			<p>
-				<a href="http://preview.themezee.com/?demo=chronus&utm_source=customizer&utm_campaign=chronus" target="_blank">
-					<?php esc_html_e( 'Theme Demo', 'chronus' ); ?>
-				</a>
-			</p>
-
-			<p>
-				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/chronus-documentation/', 'chronus' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=chronus&utm_content=documentation" target="_blank">
-					<?php esc_html_e( 'Theme Documentation', 'chronus' ); ?>
-				</a>
-			</p>
-
-			<p>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/chronus/reviews/?filter=5', 'chronus' ) ); ?>" target="_blank">
-					<?php esc_html_e( 'Rate this theme', 'chronus' ); ?>
-				</a>
-			</p>
-
-		</div>
-
-	<?php
-	$theme_links = ob_get_contents();
-	ob_end_clean();
-
-	return $theme_links;
-}

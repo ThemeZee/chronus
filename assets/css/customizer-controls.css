@@ -10,7 +10,10 @@
 	margin-bottom: 4px;
 }
 
-#customize-control-chronus_theme_options-site_description {
+#customize-control-chronus_theme_options-site_description,
+#customize-control-chronus_theme_options-theme_links,
+#customize-control-chronus_theme_options-pro_version,
+#customize-control-chronus_theme_options-magazine_blocks {
 	margin-bottom: 16px;
 }
 
@@ -39,36 +42,6 @@
 
 #customize-control-chronus_theme_options-blog_description textarea {
 	height: 4em;
-}
-
-#customize-control-chronus_theme_options-pro_version div {
-	margin: 4px 0 16px;
-}
-
-#customize-theme-controls [id$=accordion-panel-chronus_options_panel] .customize-info .customize-help-toggle {
-	top: 24px;
-	right: 4px;
-}
-
-#customize-theme-controls [id$=accordion-panel-chronus_options_panel] .customize-info .customize-help-toggle::before {
-	top: 0;
-	left: 0;
-	padding: 0;
-	color: #a0a5aa;
-	content: "\f333";
-	font-size: 28px;
-}
-
-#customize-theme-controls [id$=accordion-panel-chronus_options_panel] .customize-info .customize-help-toggle[aria-expanded="true"]::before {
-	content: "\f335";
-}
-
-#customize-theme-controls [id$=accordion-panel-chronus_options_panel] .customize-info .customize-help-toggle:hover::before {
-	color: #72777c;
-}
-
-#customize-theme-controls [id$=accordion-panel-chronus_options_panel] .customize-info .customize-help-toggle:focus::before {
-	box-shadow: none;
 }
 
 /* Magazine Widgets Button Controls */
