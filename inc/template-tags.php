@@ -271,27 +271,6 @@ if ( ! function_exists( 'chronus_entry_tags' ) ) :
 endif;
 
 
-if ( ! function_exists( 'chronus_entry_comments' ) ) :
-	/**
-	 * Displays the post comments
-	 */
-	function chronus_entry_comments() {
-
-		// Start Output Buffering.
-		ob_start();
-
-		// Display Comments.
-		comments_popup_link( esc_html__( 'Leave a comment', 'chronus' ), esc_html__( 'One comment', 'chronus' ), esc_html__( '% comments', 'chronus' ) );
-		$comments = ob_get_contents();
-
-		// End Output Buffering.
-		ob_end_clean();
-
-		echo '<span class="meta-comments"> ' . $comments . '</span>';
-	}
-endif;
-
-
 if ( ! function_exists( 'chronus_more_link' ) ) :
 	/**
 	 * Displays the more link on posts

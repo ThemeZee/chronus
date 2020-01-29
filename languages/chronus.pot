@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chronus\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2019-10-22 12:54+0200\n"
+"POT-Creation-Date: 2020-01-29 10:49+0100\n"
 "PO-Revision-Date: 2016-09-15 21:02+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
@@ -31,11 +31,11 @@ msgid ""
 "of the links below?"
 msgstr ""
 
-#: comments.php:30 inc/template-tags.php:284
+#: comments.php:30
 msgid "One comment"
 msgstr ""
 
-#: comments.php:30 inc/template-tags.php:284
+#: comments.php:30
 #, php-format
 msgid "% comments"
 msgstr ""
@@ -388,36 +388,32 @@ msgstr ""
 msgid "Tagged with "
 msgstr ""
 
-#: inc/template-tags.php:284
-msgid "Leave a comment"
-msgstr ""
-
-#: inc/template-tags.php:324
+#: inc/template-tags.php:303
 msgctxt "post navigation"
 msgid "Previous Post"
 msgstr ""
 
-#: inc/template-tags.php:325
+#: inc/template-tags.php:304
 msgctxt "post navigation"
 msgid "Next Post"
 msgstr ""
 
-#: inc/template-tags.php:378
+#: inc/template-tags.php:357
 msgctxt "pagination"
 msgid "Previous Posts"
 msgstr ""
 
-#: inc/template-tags.php:379
+#: inc/template-tags.php:358
 msgctxt "pagination"
 msgid "Next Posts"
 msgstr ""
 
-#: inc/template-tags.php:396
+#: inc/template-tags.php:375
 #, php-format
 msgid "WordPress Theme: %1$s by %2$s."
 msgstr ""
 
-#: inc/template-tags.php:397
+#: inc/template-tags.php:376
 msgid "Chronus"
 msgstr ""
 
