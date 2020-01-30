@@ -19,6 +19,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php do_action( 'wp_body_open' ); ?>
 
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'chronus' ); ?></a>
 
