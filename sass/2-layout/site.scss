@@ -1,0 +1,51 @@
+.site {
+	margin: 0 auto;
+	padding: 0 2.5em;
+	max-width: 1300px;
+	width: 100%;
+	background: #fff;
+}
+
+.site-content {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+}
+
+.content-area {
+	box-sizing: border-box;
+	padding-right: 2em;
+	width: 70%;
+}
+
+.sidebar {
+	box-sizing: border-box;
+	padding-left: 2em;
+	width: 30%;
+}
+
+/* No Sidebar & Centered Layout Template */
+.no-sidebar .site-content,
+.centered-content-area {
+	display: block;
+}
+
+.no-sidebar .content-area,
+.site-content .centered-content-area {
+	margin: 0 auto;
+	padding: 0;
+	max-width: 840px;
+	width: 100%;
+}
+
+/* Fullwidth Template */
+.site-content .fullwidth-content-area {
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+	width: 100%;
+}

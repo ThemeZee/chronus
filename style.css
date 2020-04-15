@@ -48,12 +48,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-# 1.0 - Normalize
+# - CSS Variables
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# - Normalize
 --------------------------------------------------------------*/
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust:     100%;
+	-ms-text-size-adjust: 100%;
 }
 
 body {
@@ -258,7 +262,7 @@ th {
 }
 
 /*--------------------------------------------------------------
-# 2.0 - Typography
+# - Typography
 --------------------------------------------------------------*/
 body,
 button,
@@ -337,7 +341,7 @@ pre {
 	margin-bottom: 1.5em;
 	padding: 1.5em;
 	max-width: 100%;
-	border: 1px solid rgba(0,0,0,0.075);
+	border: 1px solid rgba(0, 0, 0, 0.075);
 	background: none;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -370,20 +374,21 @@ big {
 }
 
 /*--------------------------------------------------------------
-# 3.0 - Elements
+# - Elements
 --------------------------------------------------------------*/
 html {
 	box-sizing: border-box;
 }
 
+/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 *,
-*:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*::before,
+*::after {
 	box-sizing: inherit;
 }
 
 body {
-	background: #ffffff; /* Fallback for when there is no custom background color defined. */
+	background: #fff; /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote {
@@ -424,7 +429,7 @@ hr {
 	margin-bottom: 1.5em;
 	height: 1px;
 	border: 0;
-	background-color: rgba(0,0,0,0.075);
+	background-color: rgba(0, 0, 0, 0.075);
 }
 
 ul,
@@ -470,7 +475,7 @@ table {
 th,
 td {
 	padding: 0.3em 0.6em;
-	border: 1px solid rgba(0,0,0,0.075);
+	border: 1px solid rgba(0, 0, 0, 0.075);
 }
 
 a {
@@ -499,7 +504,7 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-# 4.0 - Forms
+# - Forms
 --------------------------------------------------------------*/
 button,
 input[type="button"],
@@ -507,7 +512,7 @@ input[type="reset"],
 input[type="submit"] {
 	margin: 0;
 	padding: 0.6em 1em;
-	border: 1px solid rgba(0,0,0,0.075);
+	border: 1px solid rgba(0, 0, 0, 0.075);
 	background: none;
 	color: #cc5555;
 	text-decoration: none;
@@ -539,7 +544,7 @@ input[type="search"],
 textarea {
 	padding: 0.3em 0.6em;
 	max-width: 100%;
-	border: 1px solid rgba(0,0,0,0.075);
+	border: 1px solid rgba(0, 0, 0, 0.075);
 	background: none;
 	color: #666;
 }
@@ -550,7 +555,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-	border: 1px solid rgba(0,0,0,0.2);
+	border: 1px solid rgba(0, 0, 0, 0.2);
 	color: #303030;
 }
 
@@ -559,8 +564,9 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 5.0 - Accessibility
+# - Accessibility
 --------------------------------------------------------------*/
+
 /* Text meant only for screen readers. */
 .screen-reader-text {
 	position: absolute !important;
@@ -593,7 +599,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 6.0 - Alignments
+# - Alignments
 --------------------------------------------------------------*/
 .alignleft {
 	float: left;
@@ -614,7 +620,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 7.0 - Clearings
+# - Clearings
 --------------------------------------------------------------*/
 .clearfix:before,
 .clearfix:after,
@@ -633,7 +639,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 8.0 - Layout Structure
+# - Site Layout
 --------------------------------------------------------------*/
 .site {
 	margin: 0 auto;
@@ -688,11 +694,11 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 9.0 - Header
+# - Header
 --------------------------------------------------------------*/
 .site-header {
 	margin: 0 0 2.5em;
-	border-bottom: 1px solid rgba(0,0,0,0.075);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 }
 
 .header-main {
@@ -762,14 +768,10 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 10.0 - Navigation
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-## 10.1 - Main Navigation
+# - Navigation
 --------------------------------------------------------------*/
 .primary-navigation-wrap {
-	border-top: 1px solid rgba(0,0,0,0.075);
+	border-top: 1px solid rgba(0, 0, 0, 0.075);
 }
 
 .main-navigation-toggle {
@@ -782,11 +784,11 @@ textarea {
 	display: flex;
 	-ms-flex-flow: row wrap;
 	flex-flow: row wrap;
-	        justify-content: center;
+	justify-content: center;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
+	-ms-flex-pack: center;
 }
 
 .main-navigation-menu {
@@ -824,7 +826,7 @@ textarea {
 }
 
 .main-navigation-menu > .menu-item-has-children > a:hover .icon,
-.main-navigation-menu > .menu-item-has-children > a:active .icon  {
+.main-navigation-menu > .menu-item-has-children > a:active .icon {
 	fill: #cc5555;
 }
 
@@ -862,7 +864,7 @@ textarea {
 	padding: 1em;
 	min-width: 250px;
 	min-width: 16rem;
-	border-bottom: 1px solid rgba(255,255,255,0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .main-navigation-menu ul a:link,
@@ -872,7 +874,7 @@ textarea {
 
 .main-navigation-menu ul a:hover,
 .main-navigation-menu ul a:active {
-	color: rgba(255,255,255,0.5);
+	color: rgba(255, 255, 255, 0.5);
 }
 
 .main-navigation-menu ul .menu-item-has-children > a .icon {
@@ -886,8 +888,8 @@ textarea {
 }
 
 .main-navigation-menu ul .menu-item-has-children > a:hover .icon,
-.main-navigation-menu ul .menu-item-has-children > a:active .icon  {
-	fill: rgba(255,255,255,0.5);
+.main-navigation-menu ul .menu-item-has-children > a:active .icon {
+	fill: rgba(255, 255, 255, 0.5);
 }
 
 .main-navigation-menu li ul ul {
@@ -905,12 +907,12 @@ textarea {
 	text-decoration: underline;
 }
 
-.main-navigation-menu li.current-menu-item > a:after {
+.main-navigation-menu li.current-menu-item > a::after {
 	text-decoration: none;
 }
 
 /*--------------------------------------------------------------
-# 11.0 - Widgets
+# - Widgets
 --------------------------------------------------------------*/
 .widget {
 	margin: 0 0 2.5em 0;
@@ -944,8 +946,8 @@ textarea {
 .widget ul li,
 .widget ol li {
 	padding: 0.4em 0;
-	border-top: 1px solid rgba(0,0,0,0.075);
-	border-bottom: 1px solid rgba(0,0,0,0.075);
+	border-top: 1px solid rgba(0, 0, 0, 0.075);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 }
 
 .widget ul li + li {
@@ -964,12 +966,12 @@ textarea {
 }
 
 .widget-title a:link,
-.widget-title a:visited  {
+.widget-title a:visited {
 	color: #303030;
 }
 
 .widget-title a:hover,
-.widget-title a:active  {
+.widget-title a:active {
 	color: #cc5555;
 }
 
@@ -1019,7 +1021,7 @@ textarea {
 }
 
 .search-form .search-submit:hover .icon-search,
-.search-form .search-submit:active .icon-search  {
+.search-form .search-submit:active .icon-search {
 	fill: #303030;
 }
 
@@ -1143,15 +1145,15 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-## 11.3 - Magazine Blocks
+# - Plugins // move below later
 --------------------------------------------------------------*/
 :root {
 	--tz-column-gap: 2em;
 }
 
 .tz-magazine-block .tz-entry-title {
-    font-size: 24px;
-    font-size: 1.5rem;
+	font-size: 24px;
+	font-size: 1.5rem;
 }
 
 .tz-magazine-block .tz-magazine-grid-columns-3 .tz-entry-title {
@@ -1178,7 +1180,7 @@ textarea {
 .tz-magazine-block .tz-entry-meta .tz-meta-field:after {
 	display: inline-block;
 	margin: 0 1em 0 1em;
-	color: rgba(0,0,0,0.15);
+	color: rgba(0, 0, 0, 0.15);
 	content: "\007c";
 }
 
@@ -1200,13 +1202,13 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 12.0 - Posts and pages
+# - Posts and pages
 --------------------------------------------------------------*/
 article,
 .type-post,
 .type-page,
 .type-attachment,
-.comments-area  {
+.comments-area {
 	margin: 0 0 2.5em 0;
 	padding: 0;
 	max-width: 100%;
@@ -1242,7 +1244,7 @@ article,
 
 .sticky {
 	padding-bottom: 2em;
-	border-bottom: 1px solid rgba(0,0,0,0.075);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 }
 
 .entry-content a {
@@ -1274,7 +1276,7 @@ article,
 /* Entry Meta */
 .entry-meta {
 	margin: 0.5em 0;
-	color: rgba(0,0,0,0.45);
+	color: rgba(0, 0, 0, 0.45);
 	font-size: 16px;
 	font-size: 1rem;
 }
@@ -1283,7 +1285,7 @@ article,
 .entry-meta .meta-author:after {
 	display: inline-block;
 	margin: 0 1em 0 1em;
-	color: rgba(0,0,0,0.15);
+	color: rgba(0, 0, 0, 0.15);
 	content: "\007c";
 }
 
@@ -1295,7 +1297,7 @@ body.categories-hidden .type-post .entry-meta .meta-category {
 	overflow: hidden;
 	clip: rect(1px, 1px, 1px, 1px);
 	width: 1px;
-	height: 1px
+	height: 1px;
 }
 
 body.categories-hidden .content-area .type-post .entry-meta .meta-author:after,
@@ -1391,7 +1393,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 	display: inline-block;
 	margin: 0 0 2.5em;
 	padding: 0.6em 1em;
-	border: 1px solid rgba(0,0,0,0.075);
+	border: 1px solid rgba(0, 0, 0, 0.075);
 	background: none;
 	color: #cc5555;
 	text-decoration: none;
@@ -1470,24 +1472,48 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 	content: "\00bb"; /* Raquo */
 }
 
-.trail-separator-slash .trail-items li::after { content: "\002F"; }
-.trail-separator-dash .trail-items li::after { content: "\2013"; }
-.trail-separator-bull .trail-items li::after { content: "\2022"; }
-.trail-separator-arrow-bracket .trail-items li::after { content: "\003e"; }
-.trail-separator-raquo .trail-items li::after { content: "\00bb"; }
-.trail-separator-single-arrow .trail-items li::after { content: "\2192"; }
-.trail-separator-double-arrow .trail-items li::after { content: "\21D2"; }
+.trail-separator-slash .trail-items li::after {
+	content: "\002F";
+}
+
+.trail-separator-dash .trail-items li::after {
+	content: "\2013";
+}
+
+.trail-separator-bull .trail-items li::after {
+	content: "\2022";
+}
+
+.trail-separator-arrow-bracket .trail-items li::after {
+	content: "\003e";
+}
+
+.trail-separator-raquo .trail-items li::after {
+	content: "\00bb";
+}
+
+.trail-separator-single-arrow .trail-items li::after {
+	content: "\2192";
+}
+
+.trail-separator-double-arrow .trail-items li::after {
+	content: "\21D2";
+}
 
 .breadcrumbs .trail-items li:last-of-type::after {
 	display: none;
 }
 
 /*--------------------------------------------------------------
-# 13.0 - Featured Posts
+# - Archives and Blog Layouts
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# - Featured Posts
 --------------------------------------------------------------*/
 .featured-posts-wrap {
 	margin-bottom: 2.5em;
-	border-bottom: 1px solid rgba(0,0,0,0.075);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 }
 
 .featured-posts {
@@ -1532,7 +1558,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 	display: flex;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-	    align-content: flex-start;
+	align-content: flex-start;
 	-ms-flex-line-pack: start;
 }
 
@@ -1572,7 +1598,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 }
 
 /*--------------------------------------------------------------
-# 14.0 - Gutenberg Blocks
+# - Blocks
 --------------------------------------------------------------*/
 
 /* Audio */
@@ -1613,8 +1639,8 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 .wp-block-pullquote {
 	margin-bottom: 1.5em;
 	padding: 1.5em 0;
-    border-bottom: 4px solid #303030;
-    border-top: 4px solid #303030;
+	border-bottom: 4px solid #303030;
+	border-top: 4px solid #303030;
 }
 
 .wp-block-pullquote blockquote {
@@ -1641,11 +1667,11 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 
 /* Image */
 .wp-block-image .alignleft {
-    margin-right: 1.5em;
+	margin-right: 1.5em;
 }
 
 .wp-block-image .alignright {
-    margin-left: 1.5em;
+	margin-left: 1.5em;
 }
 
 /* Captions */
@@ -1655,8 +1681,8 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 	margin-top: 0.3em;
 	margin-bottom: 1em;
 	color: #555;
-    font-size: 14px;
-    text-align: center;
+	font-size: 14px;
+	text-align: center;
 }
 
 /* Latest Posts */
@@ -1713,7 +1739,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 }
 
 /*--------------------------------------------------------------
-# 15.0 - Comments
+# - Comments
 --------------------------------------------------------------*/
 
 /* Comment Header */
@@ -1745,7 +1771,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 .comment {
 	margin: 0 0 1.5em;
 	padding: 1.5em 0 0;
-	border-top: 1px solid rgba(0,0,0,0.075);
+	border-top: 1px solid rgba(0, 0, 0, 0.075);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -1853,15 +1879,15 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 }
 
 /*--------------------------------------------------------------
-# 16.0 - Footer
+# - Footer
 --------------------------------------------------------------*/
 .footer-wrap {
 	padding: 0 0 2.5em;
 }
 
 .site-footer {
-	border-top: 1px solid rgba(0,0,0,0.075);
-	border-bottom: 1px solid rgba(0,0,0,0.075);
+	border-top: 1px solid rgba(0, 0, 0, 0.075);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 }
 
 .site-footer .site-info {
@@ -1870,7 +1896,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 }
 
 /*--------------------------------------------------------------
-# 17.0 - Media
+# - Media - switch with footer
 --------------------------------------------------------------*/
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
@@ -1968,7 +1994,11 @@ object {
 }
 
 /*--------------------------------------------------------------
-# 18.0 - Media Queries
+# - Plugins
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# - Media Queries
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -2119,7 +2149,6 @@ object {
 	}
 
 	/*** Mobile Main Navigation ***/
-
 	/* Reset */
 	.main-navigation-menu li {
 		position: static;
@@ -2183,7 +2212,7 @@ object {
 	}
 
 	.main-navigation-toggle:hover .icon,
-	.main-navigation-toggle:active .icon  {
+	.main-navigation-toggle:active .icon {
 		fill: #cc5555;
 	}
 
@@ -2193,7 +2222,7 @@ object {
 		margin: 0;
 		padding: 0;
 		width: 100%;
-		border-top: 1px solid rgba(0,0,0,0.075);
+		border-top: 1px solid rgba(0, 0, 0, 0.075);
 	}
 
 	.main-navigation-menu li {
@@ -2209,11 +2238,11 @@ object {
 	.main-navigation-menu ul {
 		width: 100%;
 		border: none;
-		border-top: 1px solid rgba(255,255,255,0.1);
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
 	.main-navigation-menu ul li {
-		border-bottom: 1px solid rgba(255,255,255,0.1);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
 	.main-navigation-menu ul a {
@@ -2241,7 +2270,7 @@ object {
 	}
 
 	.main-navigation-menu .submenu-dropdown-toggle:hover .icon,
-	.main-navigation-menu .submenu-dropdown-toggle:active .icon  {
+	.main-navigation-menu .submenu-dropdown-toggle:active .icon {
 		fill: #cc5555;
 	}
 
@@ -2267,8 +2296,8 @@ object {
 	}
 
 	.main-navigation-menu ul .submenu-dropdown-toggle:hover .icon,
-	.main-navigation-menu ul .submenu-dropdown-toggle:active .icon  {
-		fill: rgba(255,255,255,0.5);
+	.main-navigation-menu ul .submenu-dropdown-toggle:active .icon {
+		fill: rgba(255, 255, 255, 0.5);
 	}
 
 	/* Magazine Widgets */
@@ -2652,7 +2681,23 @@ object {
 }
 
 /*--------------------------------------------------------------
-# 19.0 - Theme Option Styles
+## - Media Queries for Typography
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## - Media Queries for Layout
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## - Media Queries for Navigation
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## - Media Queries for Media
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# - Theme Options
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -2732,52 +2777,6 @@ object {
 }
 
 /*--------------------------------------------------------------
-# 21.0 - CSS Hacks for Safari
---------------------------------------------------------------*/
-
-/* Fix Flexbox issues for Safari 6.1-10.0 */
-@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
-	@media {
-		.content-area,
-		.sidebar,
-		.featured-posts .featured-large-post,
-		.featured-posts .featured-grid-posts,
-		.featured-posts .featured-grid-posts .featured-small-post,
-		.widget-magazine-posts .magazine-grid-two-columns .post-column,
-		.widget-magazine-posts .magazine-grid-three-columns .post-column,
-		.widget-magazine-posts .small-post .wp-post-image,
-		.widget-magazine-posts .small-post .post-content,
-		.widget-magazine-posts-columns .magazine-posts-column-left,
-		.widget-magazine-posts-columns .magazine-posts-column-right,
-		.widget-magazine-posts .medium-post .wp-post-image-link,
-		.widget-magazine-posts .medium-post .post-content {
-			margin-right: -1px;
-		}
-	}
-}
-
-/* Fix Flexbox issues for Safari 10.1+ */
-@media not all and (min-resolution:.001dpcm) {
-	@media {
-		.content-area,
-		.sidebar,
-		.featured-posts .featured-large-post,
-		.featured-posts .featured-grid-posts,
-		.featured-posts .featured-grid-posts .featured-small-post,
-		.widget-magazine-posts .magazine-grid-two-columns .post-column,
-		.widget-magazine-posts .magazine-grid-three-columns .post-column,
-		.widget-magazine-posts .small-post .wp-post-image,
-		.widget-magazine-posts .small-post .post-content,
-		.widget-magazine-posts-columns .magazine-posts-column-left,
-		.widget-magazine-posts-columns .magazine-posts-column-right,
-		.widget-magazine-posts .medium-post .wp-post-image-link,
-		.widget-magazine-posts .medium-post .post-content {
-			margin-right: -1px;
-		}
-	}
-}
-
-/*--------------------------------------------------------------
 # 22.0 Customizer Preview
 --------------------------------------------------------------*/
 .magazine-widgets-placeholder {
@@ -2814,7 +2813,6 @@ object {
 /*--------------------------------------------------------------
 # 23.0 Print Styles
 --------------------------------------------------------------*/
-
 @media print {
 	/* Hide elements */
 	form,
@@ -2847,3 +2845,51 @@ object {
 		width: 100%;
 	}
 }
+
+/*--------------------------------------------------------------
+# 21.0 - CSS Hacks for Safari
+--------------------------------------------------------------*/
+
+/* Fix Flexbox issues for Safari 6.1-10.0
+@media screen and ( min-color-index: 0 ) and( -webkit-min-device-pixel-ratio: 0 ) {
+	@media {
+		.content-area,
+		.sidebar,
+		.featured-posts .featured-large-post,
+		.featured-posts .featured-grid-posts,
+		.featured-posts .featured-grid-posts .featured-small-post,
+		.widget-magazine-posts .magazine-grid-two-columns .post-column,
+		.widget-magazine-posts .magazine-grid-three-columns .post-column,
+		.widget-magazine-posts .small-post .wp-post-image,
+		.widget-magazine-posts .small-post .post-content,
+		.widget-magazine-posts-columns .magazine-posts-column-left,
+		.widget-magazine-posts-columns .magazine-posts-column-right,
+		.widget-magazine-posts .medium-post .wp-post-image-link,
+		.widget-magazine-posts .medium-post .post-content {
+			margin-right: -1px;
+		}
+	}
+}
+*/
+
+/* Fix Flexbox issues for Safari 10.1+ 
+@media not all and ( min-resolution: .001dpcm ) {
+	@media {
+		.content-area,
+		.sidebar,
+		.featured-posts .featured-large-post,
+		.featured-posts .featured-grid-posts,
+		.featured-posts .featured-grid-posts .featured-small-post,
+		.widget-magazine-posts .magazine-grid-two-columns .post-column,
+		.widget-magazine-posts .magazine-grid-three-columns .post-column,
+		.widget-magazine-posts .small-post .wp-post-image,
+		.widget-magazine-posts .small-post .post-content,
+		.widget-magazine-posts-columns .magazine-posts-column-left,
+		.widget-magazine-posts-columns .magazine-posts-column-right,
+		.widget-magazine-posts .medium-post .wp-post-image-link,
+		.widget-magazine-posts .medium-post .post-content {
+			margin-right: -1px;
+		}
+	}
+}
+*/

@@ -1,0 +1,53 @@
+:root {
+	--tz-column-gap: 2em;
+}
+
+.tz-magazine-block .tz-entry-title {
+    font-size: 24px;
+    font-size: 1.5rem;
+}
+
+.tz-magazine-block .tz-magazine-grid-columns-3 .tz-entry-title {
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+.tz-magazine-block .tz-magazine-grid-columns-4 .tz-entry-title,
+.tz-magazine-block .tz-magazine-thumbnail-list .tz-entry-title {
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+.tz-magazine-block .tz-entry-meta {
+	margin: 0.2em 0;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+.tz-magazine-block .tz-meta-field {
+	margin-right: 0;
+}
+
+.tz-magazine-block .tz-entry-meta .tz-meta-field:after {
+	display: inline-block;
+	margin: 0 1em 0 1em;
+	color: rgba(0,0,0,0.15);
+	content: "\007c";
+}
+
+.tz-magazine-block .tz-entry-meta .tz-meta-field:last-child:after {
+	content: "";
+}
+
+.tz-magazine-block .tz-meta-field a {
+	text-decoration: none;
+}
+
+.tz-magazine-block .tz-entry-content {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.tz-magazine-block .tz-more-link {
+	text-decoration: none;
+}
