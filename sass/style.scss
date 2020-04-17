@@ -105,16 +105,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "2-layout/navigation";
 
 /*--------------------------------------------------------------
-# - Widgets
---------------------------------------------------------------*/
-@import "6-elements/widgets";
-
-/*--------------------------------------------------------------
-# - Plugins // move below later
---------------------------------------------------------------*/
-@import "9-plugins/magazine-blocks";
-
-/*--------------------------------------------------------------
 # - Posts and pages
 --------------------------------------------------------------*/
 @import "3-content/content";
@@ -133,15 +123,20 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 //@import "4-archives/infinite-scroll";
 
 /*--------------------------------------------------------------
+# - Blocks
+--------------------------------------------------------------*/
+@import "5-blocks/core-blocks";
+@import "5-blocks/colors";
+
+/*--------------------------------------------------------------
 # - Featured Posts
 --------------------------------------------------------------*/
 @import "6-elements/featured-posts";
 
 /*--------------------------------------------------------------
-# - Blocks
+# - Widgets
 --------------------------------------------------------------*/
-@import "5-blocks/core-blocks";
-@import "5-blocks/colors";
+@import "6-elements/widgets";
 
 /*--------------------------------------------------------------
 # - Comments
@@ -149,20 +144,20 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "6-elements/comments";
 
 /*--------------------------------------------------------------
+# - Media
+--------------------------------------------------------------*/
+@import "6-elements/media";
+
+/*--------------------------------------------------------------
 # - Footer
 --------------------------------------------------------------*/
 @import "2-layout/footer";
 
 /*--------------------------------------------------------------
-# - Media - switch with footer
---------------------------------------------------------------*/
-@import "6-elements/media";
-
-/*--------------------------------------------------------------
 # - Plugins
 --------------------------------------------------------------*/
 //@import "9-plugins/breadcrumbs";
-//@import "9-plugins/magazine-blocks";
+@import "9-plugins/magazine-blocks";
 //@import "9-plugins/related-posts";
 //@import "9-plugins/widget-bundle";
 
