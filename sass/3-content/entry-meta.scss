@@ -1,0 +1,40 @@
+/* Entry Meta */
+.entry-meta {
+	margin: 0.5em 0;
+	color: rgba(0,0,0,0.45);
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.entry-meta .meta-date:after,
+.entry-meta .meta-author:after {
+	display: inline-block;
+	margin: 0 1em 0 1em;
+	color: rgba(0,0,0,0.15);
+	content: "\007c";
+}
+
+/* Hide post meta if they are deactivated in settings */
+body.date-hidden .type-post .entry-meta .meta-date,
+body.author-hidden .type-post .entry-meta .meta-author,
+body.categories-hidden .type-post .entry-meta .meta-category {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	width: 1px;
+	height: 1px
+}
+
+body.categories-hidden .content-area .type-post .entry-meta .meta-author:after,
+body.author-hidden.categories-hidden .content-area .type-post .entry-meta .meta-date:after,
+body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry-meta {
+	display: none;
+}
+
+/* Entry Tags */
+.entry-tags {
+	margin: 0 0 2.5em;
+	color: #999;
+	font-size: 16px;
+	font-size: 1rem;
+}

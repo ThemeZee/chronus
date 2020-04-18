@@ -961,18 +961,6 @@ article,
 	text-decoration: underline;
 }
 
-/* Read more Link */
-.more-link {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	font-weight: bold;
-}
-
-.more-link:after {
-	content: " \00BB";
-}
-
 /* Page Links | wp_link_pages() */
 .page-links {
 	clear: both;
@@ -1024,6 +1012,18 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 	font-size: 1rem;
 }
 
+/* Read more Link */
+.more-link {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+.more-link::after {
+	content: " \00BB";
+}
+
 /* Post Navigation */
 .post-navigation {
 	margin: 0;
@@ -1051,12 +1051,12 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 	font-weight: bold;
 }
 
-.post-navigation .nav-links .nav-previous .nav-link-text:before {
+.post-navigation .nav-links .nav-previous .nav-link-text::before {
 	margin-right: 3px;
 	content: "\00AB";
 }
 
-.post-navigation .nav-links .nav-next .nav-link-text:after {
+.post-navigation .nav-links .nav-next .nav-link-text::after {
 	margin-left: 4px;
 	content: "\00BB";
 }
@@ -1064,6 +1064,37 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 .post-navigation .nav-links .entry-title {
 	font-size: 18px;
 	font-size: 1.125rem;
+}
+
+/*--------------------------------------------------------------
+# - Archives and Blog Layouts
+--------------------------------------------------------------*/
+
+/* Archives and Search Heading */
+.page-header {
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.archive-title {
+	margin: 0;
+	padding: 0;
+	color: #303030;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	font-weight: normal;
+	font-size: 20px;
+	font-size: 1.25rem;
+	font-family: 'Rambla', Tahoma, Arial;
+}
+
+.blog-description,
+.archive-description p {
+	margin: 0.5em 0 0;
+}
+
+.page-header .search-form {
+	margin: 1.25rem 0 2.5em;
 }
 
 /* Theme Pagination */
@@ -1115,108 +1146,6 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 .infinite-scroll #infinite-handle span:hover {
 	color: #303030;
 }
-
-/* Archives and Search Heading */
-.page-header {
-	margin: 0 0 1.5em;
-	padding: 0;
-}
-
-.archive-title {
-	margin: 0;
-	padding: 0;
-	color: #303030;
-	-ms-word-wrap: break-word;
-	word-wrap: break-word;
-	font-weight: normal;
-	font-size: 20px;
-	font-size: 1.25rem;
-	font-family: 'Rambla', Tahoma, Arial;
-}
-
-.blog-description,
-.archive-description p {
-	margin: 0.5em 0 0;
-}
-
-.page-header .search-form {
-	margin: 1.25rem 0 2.5em;
-}
-
-/* Breadcrumbs */
-.breadcrumbs {
-	box-sizing: border-box;
-	margin: 0 0 1.5em;
-	padding: 0;
-	width: 100%;
-	-ms-word-wrap: break-word;
-	word-wrap: break-word;
-}
-
-.breadcrumbs-container {
-	font-size: 15px;
-	font-size: 0.9375rem;
-}
-
-.breadcrumbs .trail-browse,
-.breadcrumbs .trail-items,
-.breadcrumbs .trail-items li {
-	display: inline;
-	margin: 0;
-	padding: 0;
-}
-
-.breadcrumbs .trail-browse {
-	margin-right: 0.5em;
-	font-weight: normal;
-	font-size: 15px;
-	font-size: 0.9375rem;
-}
-
-.breadcrumbs .trail-items {
-	list-style: none;
-}
-
-.breadcrumbs .trail-items li::after {
-	padding: 0 0.5em;
-	content: "\00bb"; /* Raquo */
-}
-
-.trail-separator-slash .trail-items li::after {
-	content: "\002F";
-}
-
-.trail-separator-dash .trail-items li::after {
-	content: "\2013";
-}
-
-.trail-separator-bull .trail-items li::after {
-	content: "\2022";
-}
-
-.trail-separator-arrow-bracket .trail-items li::after {
-	content: "\003e";
-}
-
-.trail-separator-raquo .trail-items li::after {
-	content: "\00bb";
-}
-
-.trail-separator-single-arrow .trail-items li::after {
-	content: "\2192";
-}
-
-.trail-separator-double-arrow .trail-items li::after {
-	content: "\21D2";
-}
-
-.breadcrumbs .trail-items li:last-of-type::after {
-	display: none;
-}
-
-/*--------------------------------------------------------------
-# - Archives and Blog Layouts
---------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # - Blocks
@@ -1939,6 +1868,78 @@ object {
 /*--------------------------------------------------------------
 # - Plugins
 --------------------------------------------------------------*/
+
+/* Breadcrumbs */
+.breadcrumbs {
+	box-sizing: border-box;
+	margin: 0 0 1.5em;
+	padding: 0;
+	width: 100%;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.breadcrumbs-container {
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+.breadcrumbs .trail-browse,
+.breadcrumbs .trail-items,
+.breadcrumbs .trail-items li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+.breadcrumbs .trail-browse {
+	margin-right: 0.5em;
+	font-weight: normal;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+.breadcrumbs .trail-items {
+	list-style: none;
+}
+
+.breadcrumbs .trail-items li::after {
+	padding: 0 0.5em;
+	content: "\00bb"; /* Raquo */
+}
+
+.trail-separator-slash .trail-items li::after {
+	content: "\002F";
+}
+
+.trail-separator-dash .trail-items li::after {
+	content: "\2013";
+}
+
+.trail-separator-bull .trail-items li::after {
+	content: "\2022";
+}
+
+.trail-separator-arrow-bracket .trail-items li::after {
+	content: "\003e";
+}
+
+.trail-separator-raquo .trail-items li::after {
+	content: "\00bb";
+}
+
+.trail-separator-single-arrow .trail-items li::after {
+	content: "\2192";
+}
+
+.trail-separator-double-arrow .trail-items li::after {
+	content: "\21D2";
+}
+
+.breadcrumbs .trail-items li:last-of-type::after {
+	display: none;
+}
+
 :root {
 	--tz-column-gap: 2em;
 }

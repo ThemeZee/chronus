@@ -1,0 +1,11 @@
+/* Read more Link */
+.more-link {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+.more-link::after {
+	content: " \00BB";
+}
