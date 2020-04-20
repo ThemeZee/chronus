@@ -1,0 +1,109 @@
+@media only screen and (max-width: 80em) {
+	.site {
+		padding: 0 2em;
+	}
+
+	.content-area {
+		padding-right: 1em;
+	}
+
+	.sidebar {
+		padding-left: 1em;
+	}
+
+	.header-main {
+		padding: 2em 0;
+	}
+
+	.site-header,
+	.header-image,
+	.widget,
+	.site-main article,
+	.type-post,
+	.type-page,
+	.type-attachment,
+	.comments-area,
+	.entry-tags,
+	.pagination,
+	.infinite-scroll #infinite-handle span {
+		margin-bottom: 2em;
+	}
+
+	.footer-wrap {
+		padding-bottom: 2em;
+	}
+}
+
+@media only screen and (max-width: 70em) {
+	.content-area {
+		width: 68%;
+	}
+
+	.sidebar {
+		width: 32%;
+	}
+}
+
+@media only screen and (max-width: 57.5em) {
+	.site-content {
+		display: block;
+	}
+
+	.content-area {
+		padding: 0;
+		width: 100%;
+	}
+
+	.sidebar {
+		padding: 2em 0 0;
+		width: 100%;
+	}
+
+	.header-main {
+		padding-top: 1.5em;
+	}
+}
+
+@media only screen and (max-width: 40em) {
+	.site {
+		padding: 0 1.5em;
+	}
+
+	.header-main {
+		padding: 1em 1.5em 1.5em;
+	}
+
+	.site-header,
+	.header-image,
+	.widget,
+	.site-main article,
+	.type-post,
+	.type-page,
+	.type-attachment,
+	.comments-area,
+	.entry-tags,
+	.pagination,
+	.infinite-scroll #infinite-handle span {
+		margin-bottom: 1.5em;
+	}
+
+	.footer-wrap {
+		padding-bottom: 1.5em;
+	}
+
+	.wp-post-image {
+		margin: 0 0 0.75em;
+	}
+}
+
+@media only screen and (max-width: 25em) {
+	.entry-meta .meta-date,
+	.entry-meta .meta-category {
+		display: block;
+	}
+
+	.entry-meta .meta-date::after,
+	.entry-meta .meta-author::after {
+		display: none;
+	}
+}

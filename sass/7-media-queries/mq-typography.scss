@@ -1,0 +1,85 @@
+@media only screen and (max-width: 70em) {
+	.site-title {
+		font-size: 44px;
+		font-size: 2.75rem;
+	}
+
+	.entry-title {
+		font-size: 32px;
+		font-size: 2rem;
+	}
+}
+
+@media only screen and (max-width: 57.5em) {
+	.site-title {
+		font-size: 40px;
+		font-size: 2.5rem;
+	}
+
+	.site-description {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
+	.entry-title {
+		font-size: 36px;
+		font-size: 2.25rem;
+	}
+}
+
+@media only screen and (max-width: 50em) {
+	.entry-title {
+		font-size: 32px;
+		font-size: 2rem;
+	}
+}
+
+@media only screen and (max-width: 40em) {
+	body,
+	button,
+	input,
+	select,
+	textarea {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
+	.site-title {
+		font-size: 36px;
+		font-size: 2.25rem;
+	}
+
+	.site-description {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+
+	.entry-title {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+
+	.entry-meta {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+}
+
+@media only screen and (max-width: 30em) {
+	.entry-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+}
+
+@media only screen and (max-width: 20em) {
+	.site-title {
+		font-size: 32px;
+		font-size: 2rem;
+	}
+
+	.entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+}

@@ -1,0 +1,304 @@
+@media only screen and (max-width: 80em) {
+
+	/* Featured Posts */
+	.featured-posts-wrap {
+		margin-bottom: 2em;
+	}
+
+	.featured-posts {
+		margin-right: -2em;
+	}
+
+	.featured-posts .featured-large-post {
+		padding-right: 1em;
+	}
+
+	.featured-posts .featured-grid-posts {
+		padding-left: 1em;
+	}
+
+	.featured-posts .featured-grid-posts .featured-small-post {
+		padding-right: 2em;
+	}
+}
+
+@media only screen and (max-width: 70em) {
+
+	/* Magazine Widgets */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 22px;
+		font-size: 1.375rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
+	/* Featured Posts */
+	.featured-posts .featured-large-post .type-post .entry-title {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+
+	.featured-posts .featured-grid-posts .featured-small-post .type-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+}
+
+@media only screen and (max-width: 57.5em) {
+
+	/* Magazine Widgets */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	/* Featured Posts */
+	.featured-posts .featured-large-post {
+		padding: 0 2em 0 0;
+		width: 100%;
+	}
+
+	.featured-posts .featured-grid-posts {
+		padding: 0;
+		width: 100%;
+	}
+
+	.featured-posts .featured-large-post .type-post .entry-title {
+		font-size: 36px;
+		font-size: 2.25rem;
+	}
+
+	.featured-posts .featured-grid-posts .featured-small-post .type-post .entry-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+}
+
+@media only screen and (max-width: 50em) {
+
+	/* Magazine Widgets */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 22px;
+		font-size: 1.375rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
+	/* Featured Posts */
+	.featured-posts .featured-large-post .type-post .entry-title {
+		font-size: 32px;
+		font-size: 2rem;
+	}
+
+	.featured-posts .featured-grid-posts .featured-small-post .type-post .entry-title {
+		font-size: 22px;
+		font-size: 1.375rem;
+	}
+}
+
+@media only screen and (max-width: 45em) {
+
+	/* Magazine Widgets */
+	.widget-magazine-posts .medium-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+}
+
+@media only screen and (max-width: 40em) {
+
+	/* Magazine Widgets */
+	.widget-magazine-posts {
+		margin-bottom: -1.5em;
+	}
+
+	.widget-magazine-posts .type-post {
+		margin: 0 0 1.5em 0;
+	}
+
+	/* Magazine Grid Widget */
+	.widget-magazine-posts .magazine-grid {
+		display: block;
+		margin-right: 0;
+	}
+
+	.widget-magazine-posts .magazine-grid .post-column {
+		box-sizing: border-box;
+		padding-right: 0;
+		width: 100%;
+	}
+
+	/* Magazine Medium Posts */
+	.widget-magazine-posts .medium-post {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+
+	.widget-magazine-posts .medium-post .wp-post-image-link {
+		width: 40%;
+	}
+
+	.widget-magazine-posts .medium-post .wp-post-image {
+		margin: 0;
+	}
+
+	.widget-magazine-posts .medium-post .post-content {
+		padding-left: 1.5em;
+		width: 60%;
+	}
+
+	/* Magazine Columns Widget */
+	.widget-magazine-posts-columns .widget-magazine-posts-content {
+		display: block;
+		margin-right: 0;
+	}
+
+	.widget-magazine-posts-columns .magazine-posts-column-left {
+		padding-right: 0;
+		width: 100%;
+	}
+
+	.widget-magazine-posts-columns .magazine-posts-column-right {
+		padding-left: 0;
+		width: 100%;
+	}
+
+	/* Magazine Widgets Post Titles */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	/* Featured Posts */
+	.featured-posts {
+		margin-right: -1.5em;
+	}
+
+	.featured-posts .featured-large-post {
+		padding-right: 1.5em;
+	}
+
+	.featured-posts .featured-grid-posts .featured-small-post {
+		padding-right: 1.5em;
+	}
+
+	.featured-posts .featured-large-post .type-post .entry-title {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+
+	.featured-posts .featured-grid-posts .featured-small-post .type-post .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+}
+
+@media only screen and (max-width: 30em) {
+
+	/* Magazine Widgets */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 22px;
+		font-size: 1.375rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
+	/* Featured Posts */
+	.featured-posts .featured-grid-posts .featured-small-post {
+		width: 100%;
+	}
+
+	.featured-posts .featured-large-post .type-post .entry-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+}
+
+@media only screen and (max-width: 25em) {
+
+	/* Magazine Widgets */
+	.widget-magazine-posts .medium-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+}
+
+@media only screen and (max-width: 20em) {
+
+	/* Magazine Widgets */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-meta,
+	.widget-magazine-posts .small-post .entry-meta {
+		display: none;
+	}
+
+	/* Featured Posts */
+	.featured-posts .featured-large-post .type-post .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+
+	.featured-posts .featured-grid-posts .featured-small-post .type-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+}
