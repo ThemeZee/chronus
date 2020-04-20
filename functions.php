@@ -169,6 +169,9 @@ function chronus_scripts() {
 	// Register and Enqueue Stylesheet.
 	wp_enqueue_style( 'chronus-stylesheet', get_stylesheet_uri(), array(), $theme_version );
 
+	// Register and Enqueue Safari Flexbox CSS fixes.
+	wp_enqueue_style( 'chronus-safari-flexbox-fixes', get_template_directory_uri() . '/assets/css/safari-flexbox-fixes.css', array(), '20200420' );
+
 	// Register and enqueue navigation.js.
 	wp_enqueue_script( 'chronus-jquery-navigation', get_template_directory_uri() . '/assets/js/navigation.min.js', array( 'jquery' ), '20170725' );
 
