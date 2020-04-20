@@ -1,0 +1,31 @@
+@media print {
+	form,
+	button,
+	input,
+	select,
+	textarea,
+	.header-bar-wrap,
+	.primary-navigation-wrap,
+	#secondary,
+	.footer-navigation,
+	.footer-widgets-background,
+	.header-image,
+	.page-links,
+	.post-navigation,
+	.pagination.navigation,
+	.comments-area,
+	.footer-wrap,
+	.scroll-to-top {
+		display: none !important;
+	}
+
+	body,
+	.site {
+		background: none !important;
+	}
+
+	.content-area {
+		padding: 0;
+		width: 100%;
+	}
+}

@@ -1,7 +1,4 @@
-
-/*--------------------------------------------------------------
-## 19.1 - Sidebar Left Layout
---------------------------------------------------------------*/
+/* Sidebar Left Layout */
 .sidebar-left .content-area {
 	order: 2;
 	padding-right: 0;
@@ -38,9 +35,7 @@
 	}
 }
 
-/*--------------------------------------------------------------
-## 19.2 - Boxed Design
---------------------------------------------------------------*/
+/* Boxed Design */
 .boxed-design .site {
 	margin: 2.5em auto;
 	padding: 0;
@@ -62,9 +57,7 @@
 	border-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# 22.0 Customizer Preview
---------------------------------------------------------------*/
+/* Customizer Preview */
 .magazine-widgets-placeholder {
 	position: relative;
 }
@@ -94,41 +87,4 @@
 
 .customize-partial-edit-shortcut-chronus_featured_content_partial button {
 	top: -40px;
-}
-
-/*--------------------------------------------------------------
-# 23.0 Print Styles
---------------------------------------------------------------*/
-
-@media print {
-	/* Hide elements */
-	form,
-	button,
-	input,
-	select,
-	textarea,
-	.header-bar-wrap,
-	.primary-navigation-wrap,
-	#secondary,
-	.footer-navigation,
-	.footer-widgets-background,
-	.header-image,
-	.page-links,
-	.post-navigation,
-	.pagination.navigation,
-	.comments-area,
-	.footer-wrap,
-	.scroll-to-top {
-		display: none !important;
-	}
-
-	body,
-	.site {
-		background: none !important;
-	}
-
-	.content-area {
-		padding: 0;
-		width: 100%;
-	}
 }
