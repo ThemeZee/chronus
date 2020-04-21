@@ -28,6 +28,32 @@ function chronus_customize_register_website_settings( $wp_customize ) {
 		'render_callback' => 'chronus_customize_partial_blogdescription',
 	) );
 
+	// Add Retina Logo Headline.
+	$wp_customize->add_control( new Chronus_Customize_Header_Control(
+		$wp_customize, 'chronus_theme_options[retina_logo_title]', array(
+			'label'    => esc_html__( 'Retina Logo', 'chronus' ),
+			'section'  => 'title_tagline',
+			'settings' => array(),
+			'priority' => 8,
+		)
+	) );
+
+	// Add Retina Logo Setting.
+	$wp_customize->add_setting( 'chronus_theme_options[retina_logo]', array(
+		'default'           => false,
+		'type'              => 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'chronus_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'chronus_theme_options[retina_logo]', array(
+		'label'    => esc_html__( 'Scale down logo image for retina displays', 'chronus' ),
+		'section'  => 'title_tagline',
+		'settings' => 'chronus_theme_options[retina_logo]',
+		'type'     => 'checkbox',
+		'priority' => 9,
+	) );
+
 	// Add Display Site Title Setting.
 	$wp_customize->add_setting( 'chronus_theme_options[site_title]', array(
 		'default'           => true,

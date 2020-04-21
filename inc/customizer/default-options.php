@@ -49,6 +49,7 @@ function chronus_theme_options() {
 function chronus_default_options() {
 
 	$default_options = array(
+		'retina_logo'           => false,
 		'site_title'            => true,
 		'site_description'      => true,
 		'sidebar_position'      => 'right-sidebar',
