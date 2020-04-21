@@ -26,6 +26,9 @@ For more information about Chronus please go to https://themezee.com/themes/chro
 
 == Changelog ==
 
+= 1.7.1 - 2020-04-21 =
+* remove Sass files from theme folder
+
 = 1.7 - 2020-04-21 =
 * added Retina Logo option
 * restructured Sass files and CSS sections
