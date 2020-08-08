@@ -173,10 +173,15 @@ function chronus_scripts() {
 	wp_enqueue_style( 'chronus-safari-flexbox-fixes', get_template_directory_uri() . '/assets/css/safari-flexbox-fixes.css', array(), '20200420' );
 
 	// Register and enqueue navigation.js.
-	wp_enqueue_script( 'chronus-jquery-navigation', get_template_directory_uri() . '/assets/js/navigation.min.js', array( 'jquery' ), '20170725' );
-
-	// Passing Parameters to navigation.js.
-	wp_localize_script( 'chronus-jquery-navigation', 'chronus_menu_title', chronus_get_svg( 'menu' ) . esc_html__( 'Menu', 'chronus' ) );
+	if ( has_nav_menu( 'primary' ) ) {
+		wp_enqueue_script( 'chronus-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20191114', true );
+		$chronus_l10n = array(
+			'expand'   => esc_html__( 'Expand child menu', 'chronus' ),
+			'collapse' => esc_html__( 'Collapse child menu', 'chronus' ),
+			'icon'     => chronus_get_svg( 'expand' ),
+		);
+		wp_localize_script( 'chronus-navigation', 'chronusScreenReaderText', $chronus_l10n );
+	}
 
 	// Enqueue svgxuse to support external SVG Sprites in Internet Explorer.
 	wp_enqueue_script( 'svgxuse', get_theme_file_uri( '/assets/js/svgxuse.min.js' ), array(), '1.2.4' );

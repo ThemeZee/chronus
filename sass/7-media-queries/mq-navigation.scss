@@ -1,170 +1,103 @@
-@media only screen and (max-width: 57.5em) {
-
-	/* Reset */
-	.main-navigation-menu li {
-		position: static;
+@media only screen and (min-width: 60em) {
+	.primary-menu-toggle,
+	.main-navigation .dropdown-toggle {
+		display: none;
 	}
 
-	.main-navigation-menu ul {
-		position: static;
-		top: auto;
-		left: auto;
+	.main-navigation ul,
+	.main-navigation ul ul {
 		display: block;
 	}
 
-	.main-navigation-menu ul a {
-		min-width: auto;
+	.primary-navigation {
+		display: flex;
 		width: auto;
+		justify-content: center;
+		align-items: center;
 	}
 
-	.main-navigation-menu li ul ul {
-		top: auto;
-		left: auto;
+	#masthead .main-navigation > ul.menu {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
 		margin: 0;
+		border-bottom: none;
+		justify-content: center;
 	}
 
-	/* Main Navigation Toggle */
-	.primary-navigation-wrap {
-		text-align: center;
-	}
-
-	.main-navigation-toggle {
-		display: inline-block;
-		margin: 0;
-		padding: 0.75em 1em;
+	.main-navigation > ul {
 		border: none;
-		background: none;
-		color: #303030;
-		text-decoration: none;
-		font-weight: normal;
-		font-size: 20px;
-		font-size: 1.25rem;
-		font-family: 'Rambla', Tahoma, Arial;
 	}
 
-	.main-navigation-toggle:hover,
-	.main-navigation-toggle:focus,
-	.main-navigation-toggle:active {
-		background: none;
+	.main-navigation ul li {
+		text-align: initial;
 	}
 
-	.main-navigation-toggle:hover,
-	.main-navigation-toggle:active {
-		color: #cc5555;
-		cursor: pointer;
+	/* Dropdown Menus */
+	.main-navigation ul ul {
+		position: absolute;
+		left: -999em;
+		top: 100%;
+		z-index: 99999;
 	}
 
-	.main-navigation-toggle .icon {
-		margin: 0.25em 0.6em 0 0;
-		width: 25px;
-		height: 25px;
-		vertical-align: top;
-		fill: #303030;
+	.main-navigation ul li:hover > ul,
+	.main-navigation ul li.focus > ul {
+		right: auto;
+		left: 0;
 	}
 
-	.main-navigation-toggle:hover .icon,
-	.main-navigation-toggle:active .icon {
-		fill: #cc5555;
+	.main-navigation ul ul li a {
+		width: 16rem;
 	}
 
-	/* Main Navigation Menu */
-	.main-navigation-menu {
-		display: none;
-		margin: 0;
-		padding: 0;
-		width: 100%;
-		border-top: 1px solid rgba(0, 0, 0, 0.075);
+	.main-navigation ul ul ul {
+		left: -999em;
+		top: 0;
 	}
 
-	.main-navigation-menu li {
-		margin: 0;
+	.main-navigation ul ul li:hover > ul,
+	.main-navigation ul ul li.focus > ul {
+		right: auto;
+		left: 100%;
 	}
 
-	.main-navigation-menu a {
+	.main-navigation ul ul li a,
+	.main-navigation ul ul ul li a,
+	.main-navigation ul ul ul ul li a {
+		padding: 1em;
+	}
+
+	/* Dropdown Icons */
+	.main-navigation ul .menu-item-has-children > a > .icon {
 		position: relative;
 		display: inline-block;
-		padding: 0.75em 1em;
-	}
-
-	.main-navigation-menu ul {
-		width: 100%;
-		border: none;
-		border-top: 1px solid rgba(255, 255, 255, 0.1);
-	}
-
-	.main-navigation-menu ul li {
-		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-	}
-
-	.main-navigation-menu ul a {
-		display: inline-block;
-		border: none;
-	}
-
-	/* Mobile Submenu Dropdowns */
-	.main-navigation-menu .submenu-dropdown-toggle {
-		position: absolute;
-		padding: 0.9em;
-	}
-
-	.main-navigation-menu .submenu-dropdown-toggle:hover,
-	.main-navigation-menu .submenu-dropdown-toggle:active {
-		cursor: pointer;
-	}
-
-	.main-navigation-menu .submenu-dropdown-toggle .icon {
-		margin: 0.45em 0 0;
-		width: 19px;
-		height: 19px;
-		vertical-align: top;
+		left: 0.5rem;
+		top: 0.1rem;
+		width: 14px;
+		height: 14px;
 		fill: #303030;
 	}
 
-	.main-navigation-menu .submenu-dropdown-toggle:hover .icon,
-	.main-navigation-menu .submenu-dropdown-toggle:active .icon {
+	.main-navigation ul .menu-item-has-children > a:hover > .icon {
 		fill: #cc5555;
 	}
 
-	.main-navigation-menu .submenu-dropdown-toggle.active .icon {
-		margin: 0.5em 0 0;
-		-webkit-transform: rotate(180deg);
-		transform: rotate(180deg);
-	}
-
-	.main-navigation-menu ul .submenu-dropdown-toggle {
-		padding: 0.8em;
-	}
-
-	.main-navigation-menu ul .submenu-dropdown-toggle .icon {
-		margin: 0.55em 0 0;
-		width: 16px;
-		height: 16px;
+	.main-navigation ul ul .menu-item-has-children > a > .icon {
+		position: absolute;
+		left: auto;
+		right: 1em;
+		top: 50%;
+		margin-top: -0.5rem;
+		-webkit-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		transform: rotate(-90deg);
 		fill: #fff;
 	}
 
-	.main-navigation-menu ul .submenu-dropdown-toggle.active .icon {
-		margin: 0.6em 0 0;
-	}
-
-	.main-navigation-menu ul .submenu-dropdown-toggle:hover .icon,
-	.main-navigation-menu ul .submenu-dropdown-toggle:active .icon {
+	.main-navigation ul ul .menu-item-has-children > a:hover > .icon {
 		fill: rgba(255, 255, 255, 0.5);
-	}
-}
-
-@media only screen and (max-width: 40em) {
-	.main-navigation-toggle,
-	.main-navigation-menu a {
-		font-size: 18px;
-		font-size: 1.125rem;
-	}
-}
-
-/* Ensure navigation is visible on desktop view */
-@media only screen and (min-width: 57.501em) {
-	.main-navigation-menu {
-		display: -webkit-box !important;
-		display: -ms-flexbox !important;
-		display: flex !important;
 	}
 }
