@@ -173,7 +173,7 @@ function chronus_scripts() {
 	wp_enqueue_style( 'chronus-safari-flexbox-fixes', get_template_directory_uri() . '/assets/css/safari-flexbox-fixes.css', array(), '20200420' );
 
 	// Register and enqueue navigation.js.
-	if ( has_nav_menu( 'primary' ) ) {
+	if ( has_nav_menu( 'primary' ) || has_nav_menu( 'secondary' ) ) {
 		wp_enqueue_script( 'chronus-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20191114', true );
 		$chronus_l10n = array(
 			'expand'   => esc_html__( 'Expand child menu', 'chronus' ),
