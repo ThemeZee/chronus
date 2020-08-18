@@ -11,8 +11,6 @@
 
 	<div id="main-navigation-wrap" class="primary-navigation-wrap">
 
-		<?php do_action( 'chronus_header_search' ); ?>
-
 		<button class="primary-menu-toggle menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 			<?php
 			echo chronus_get_svg( 'menu' );
