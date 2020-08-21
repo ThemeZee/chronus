@@ -2,7 +2,7 @@
  * @copyright Copyright (c) 2017 IcoMoon.io
  * @license   Licensed under MIT license
  *            See https://github.com/Keyamoon/svgxuse
- * @version   1.2.4
+ * @version   1.2.6
  */
 /*jslint browser: true */
 /*global XDomainRequest, MutationObserver, window */
@@ -85,7 +85,6 @@
             var i;
             var inProgressCount = 0;
             var isHidden;
-            var isXlink = false;
             var Request;
             var url;
             var uses;
@@ -101,9 +100,8 @@
             function attrUpdateFunc(spec) {
                 return function () {
                     if (cache[spec.base] !== true) {
-                        if (spec.isXlink) {
-                            spec.useEl.setAttributeNS(xlinkNS, "xlink:href", "#" + spec.hash);
-                        } else {
+                        spec.useEl.setAttributeNS(xlinkNS, "xlink:href", "#" + spec.hash);
+                        if (spec.useEl.hasAttribute("href")) {
                             spec.useEl.setAttribute("href", "#" + spec.hash);
                         }
                     }
@@ -145,13 +143,9 @@
                     // failed to get bounding rectangle of the use element
                     bcr = false;
                 }
-                href = uses[i].getAttribute("href");
-                if (!href) {
-                    href = uses[i].getAttributeNS(xlinkNS, "href");
-                    isXlink = true;
-                } else {
-                    isXlink = false;
-                }
+                href = uses[i].getAttribute("href")
+                        || uses[i].getAttributeNS(xlinkNS, "href")
+                        || uses[i].getAttribute("xlink:href");
                 if (href && href.split) {
                     url = href.split("#");
                 } else {
@@ -167,6 +161,9 @@
                     if (fallback && !base.length && hash && !document.getElementById(hash)) {
                         base = fallback;
                     }
+                    if (uses[i].hasAttribute("href")) {
+                        uses[i].setAttributeNS(xlinkNS, "xlink:href", href);
+                    }
                     if (base.length) {
                         // schedule updating xlink:href
                         xhr = cache[base];
@@ -175,8 +172,7 @@
                             setTimeout(attrUpdateFunc({
                                 useEl: uses[i],
                                 base: base,
-                                hash: hash,
-                                isXlink: isXlink
+                                hash: hash
                             }), 0);
                         }
                         if (xhr === undefined) {
@@ -209,8 +205,7 @@
                         setTimeout(attrUpdateFunc({
                             useEl: uses[i],
                             base: base,
-                            hash: hash,
-                            isXlink: isXlink
+                            hash: hash
                         }), 0);
                     }
                 }
