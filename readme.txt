@@ -2,8 +2,8 @@
 Author URI: https://themezee.com
 Theme URI: https://themezee.com/themes/chronus/
 Contributors: themezee
-Tags: two-columns, blog, news, custom-background, custom-logo, custom-header, custom-menu, grid-layout, entertainment, editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
-Requires at least: 4.7
+Tags: two-columns, blog, news, custom-background, custom-logo, custom-header, custom-menu, grid-layout, entertainment, editor-style, block-styles, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
+Requires at least: 5.2
 Tested up to: 5.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -26,13 +26,16 @@ For more information about Chronus please go to https://themezee.com/themes/chro
 
 == Changelog ==
 
-= 1.8.1 - 2020-04-24 =
+= 1.9 - 2020-09-16 =
+* added support for the official AMP plugin
+
+= 1.8.1 - 2020-08-24 =
 * fixed styling of menu items with empty links
 * fixed undefined naviClass variable warning
 
 = 1.8 - 2020-08-18 =
-Changed implementation, styles and scripts of main navigation menu
-Important Update: Please read https://themezee.com/2020/08/updates-for-improved-navigation-menus/
+* Changed implementation, styles and scripts of main navigation menu
+* Important Update: Please read https://themezee.com/2020/08/updates-for-improved-navigation-menus/
 
 = 1.7.1 - 2020-04-21 =
 * remove Sass files from theme folder
