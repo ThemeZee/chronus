@@ -68,7 +68,7 @@
 	background: #cc5555;
 }
 
-.is-amp-page .main-navigation ul ul,
+.is-amp-page .main-navigation ul button.toggled-on + ul,
 .main-navigation ul ul.toggled-on {
 	display: block;
 }
