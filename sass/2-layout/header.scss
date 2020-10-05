@@ -28,11 +28,11 @@
 	padding: 0;
 	color: #303030;
 	text-decoration: none;
-	font-weight: bold;
-	font-size: 48px;
-	font-size: 3rem;
-	font-family: 'Rambla', Tahoma, Arial;
-	line-height: 1.4;
+	@include font-size(48);
+	@include font-family(--title-font);
+	@include font-weight(--title-font-weight);
+	@include text-transform(--title-text-transform);
+	@include line-height(--title-line-height);
 }
 
 .site-title a:link,

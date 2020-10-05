@@ -13,7 +13,9 @@
 	color: #303030;
 	list-style: none;
 	@include font-size(20);
-	font-family: 'Rambla', Tahoma, Arial;
+	@include font-family(--navi-font);
+	@include font-weight(--navi-font-weight);
+	@include text-transform(--navi-text-transform);
 }
 
 .main-navigation > ul {
@@ -99,8 +101,9 @@
 	color: #303030;
 	text-decoration: none;
 	@include font-size(20);
-	font-family: 'Rambla', Tahoma, Arial;
-	font-weight: normal;
+	@include font-family(--navi-font);
+	@include font-weight(--navi-font-weight);
+	@include text-transform(--navi-text-transform);
 	text-align: left;
 	align-items: center;
 }

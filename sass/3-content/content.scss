@@ -14,10 +14,11 @@ article,
 	color: #303030;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-size: 36px;
-	font-size: 2.25rem;
-	font-family: 'Rambla', Tahoma, Arial;
-	line-height: 1.4;
+	@include font-size(36);
+	@include font-family(--title-font);
+	@include font-weight(--title-font-weight);
+	@include text-transform(--title-text-transform);
+	@include line-height(--title-line-height);
 }
 
 .entry-title a:link,

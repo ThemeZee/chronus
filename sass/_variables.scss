@@ -63,14 +63,16 @@ $themeFonts: (
 
 // Font Weight.
 $fontWeight: (
-	--title-font-weight : bold,
-	--navi-font-weight  : normal,
+	--title-font-weight: bold,
+	--navi-font-weight : normal,
+	--widget-title-font-weight: normal,
 );
 
 // Text Transform.
 $textTransform: (
-	--title-text-transform : none,
-	--navi-text-transform  : none,
+	--title-text-transform: none,
+	--navi-text-transform: none,
+	--widget-title-text-transform: none,
 );
 
 // Line Height.

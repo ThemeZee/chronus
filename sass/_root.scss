@@ -5,8 +5,10 @@
 	@include variable(--widget-title-font, $themeFonts);
 	@include variable(--title-font-weight, $fontWeight);
 	@include variable(--navi-font-weight, $fontWeight);
+	@include variable(--widget-title-font-weight, $fontWeight);
 	@include variable(--title-text-transform, $textTransform);
 	@include variable(--navi-text-transform, $textTransform);
+	@include variable(--widget-title-text-transform, $textTransform);
 	@include variable(--text-line-height, $lineHeight);
 	@include variable(--title-line-height, $lineHeight);
 }

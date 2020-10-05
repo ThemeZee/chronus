@@ -12,10 +12,11 @@
 	color: #303030;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-weight: normal;
-	font-size: 20px;
-	font-size: 1.25rem;
-	font-family: 'Rambla', Tahoma, Arial;
+	@include font-size(20);
+	@include font-family(--widget-title-font);
+	@include font-weight(--widget-title-font-weight);
+	@include text-transform(--widget-title-text-transform);
+	@include line-height(--title-line-height);
 }
 
 /* Comment List */

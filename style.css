@@ -66,8 +66,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	--widget-title-font: "Rambla", arial, helvetica, sans-serif;
 	--title-font-weight: bold;
 	--navi-font-weight: normal;
+	--widget-title-font-weight: normal;
 	--title-text-transform: none;
 	--navi-text-transform: none;
+	--widget-title-text-transform: none;
 	--text-line-height: 1.75;
 	--title-line-height: 1.4;
 }
@@ -293,8 +295,10 @@ textarea {
 	color: #303030;
 	font-size: 17px;
 	font-size: 1.0625rem;
-	font-family: 'Raleway', Tahoma, Arial;
+	font-family: "Raleway", arial, helvetica, sans-serif;
+	font-family: var(--text-font);
 	line-height: 1.75;
+	line-height: var(--text-line-height);
 }
 
 h1,
@@ -306,6 +310,7 @@ h6 {
 	clear: both;
 	margin: 1em 0 0.75em;
 	line-height: 1.4;
+	line-height: var(--title-line-height);
 }
 
 h1 {
@@ -747,11 +752,16 @@ textarea {
 	padding: 0;
 	color: #303030;
 	text-decoration: none;
-	font-weight: bold;
 	font-size: 48px;
 	font-size: 3rem;
-	font-family: 'Rambla', Tahoma, Arial;
+	font-family: "Rambla", arial, helvetica, sans-serif;
+	font-family: var(--title-font);
+	font-weight: bold;
+	font-weight: var(--title-font-weight);
+	text-transform: none;
+	text-transform: var(--title-text-transform);
 	line-height: 1.4;
+	line-height: var(--title-line-height);
 }
 
 .site-title a:link,
@@ -807,7 +817,12 @@ textarea {
 	list-style: none;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-family: 'Rambla', Tahoma, Arial;
+	font-family: "Rambla", arial, helvetica, sans-serif;
+	font-family: var(--navi-font);
+	font-weight: normal;
+	font-weight: var(--navi-font-weight);
+	text-transform: none;
+	text-transform: var(--navi-text-transform);
 }
 
 .main-navigation > ul {
@@ -895,8 +910,12 @@ textarea {
 	text-decoration: none;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-family: 'Rambla', Tahoma, Arial;
+	font-family: "Rambla", arial, helvetica, sans-serif;
+	font-family: var(--navi-font);
 	font-weight: normal;
+	font-weight: var(--navi-font-weight);
+	text-transform: none;
+	text-transform: var(--navi-text-transform);
 	text-align: left;
 	align-items: center;
 }
@@ -1019,8 +1038,14 @@ article,
 	word-wrap: break-word;
 	font-size: 36px;
 	font-size: 2.25rem;
-	font-family: 'Rambla', Tahoma, Arial;
+	font-family: "Rambla", arial, helvetica, sans-serif;
+	font-family: var(--title-font);
+	font-weight: bold;
+	font-weight: var(--title-font-weight);
+	text-transform: none;
+	text-transform: var(--title-text-transform);
 	line-height: 1.4;
+	line-height: var(--title-line-height);
 }
 
 .entry-title a:link,
@@ -1169,10 +1194,16 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 	color: #303030;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-weight: normal;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-family: 'Rambla', Tahoma, Arial;
+	font-family: "Rambla", arial, helvetica, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: normal;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: none;
+	text-transform: var(--widget-title-text-transform);
+	line-height: 1.4;
+	line-height: var(--title-line-height);
 }
 
 .blog-description,
@@ -1197,7 +1228,12 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 	text-decoration: none;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-family: 'Rambla', Tahoma, Arial;
+	font-family: "Rambla", arial, helvetica, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: normal;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: none;
+	text-transform: var(--widget-title-text-transform);
 }
 
 /* Infinite Scroll Pagination */
@@ -1484,10 +1520,16 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 	margin: 0;
 	padding: 0;
 	color: #303030;
-	font-weight: normal;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-family: 'Rambla', Tahoma, Arial;
+	font-family: "Rambla", arial, helvetica, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: normal;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: none;
+	text-transform: var(--widget-title-text-transform);
+	line-height: 1.4;
+	line-height: var(--title-line-height);
 }
 
 .widget ul {
@@ -1710,10 +1752,16 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 	color: #303030;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-weight: normal;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-family: 'Rambla', Tahoma, Arial;
+	font-family: "Rambla", arial, helvetica, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: normal;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: none;
+	text-transform: var(--widget-title-text-transform);
+	line-height: 1.4;
+	line-height: var(--title-line-height);
 }
 
 /* Comment List */
