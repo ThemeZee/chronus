@@ -59,6 +59,18 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # - CSS Variables
 --------------------------------------------------------------*/
+:root {
+	--text-font: "Raleway", arial, helvetica, sans-serif;
+	--title-font: "Rambla", arial, helvetica, sans-serif;
+	--navi-font: "Rambla", arial, helvetica, sans-serif;
+	--widget-title-font: "Rambla", arial, helvetica, sans-serif;
+	--title-font-weight: bold;
+	--navi-font-weight: normal;
+	--title-text-transform: none;
+	--navi-text-transform: none;
+	--text-line-height: 1.75;
+	--title-line-height: 1.4;
+}
 
 /*--------------------------------------------------------------
 # - Normalize
