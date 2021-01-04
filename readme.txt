@@ -26,6 +26,9 @@ For more information about Chronus please go to https://themezee.com/themes/chro
 
 == Changelog ==
 
+= 1.9.2 - 2021-01-04 =
+* added support for Related Posts plugin to Centered Layout page template
+
 = 1.9.1 - 2020-10-05 =
 * added AMP dropdown toggles for sub menus
 * added CSS variables for typography styling

@@ -19,6 +19,8 @@ get_header(); ?>
 
 					get_template_part( 'template-parts/content', 'single' );
 
+					chronus_related_posts();
+
 				else :
 
 					get_template_part( 'template-parts/content', 'page' );
