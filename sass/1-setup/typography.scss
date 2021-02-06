@@ -3,7 +3,7 @@ button,
 input,
 select,
 textarea {
-	color: #303030;
+	@include color(--text-color);
 	@include font-size(17);
 	@include font-family(--text-font);
 	@include line-height(--text-line-height);
@@ -16,7 +16,8 @@ h4,
 h5,
 h6 {
 	clear: both;
-	margin: 1em 0 0.75em;
+	margin-top: 1em;
+	margin-bottom: 0.75em;
 	@include line-height(--title-line-height);
 }
 
@@ -68,10 +69,10 @@ pre {
 	margin-bottom: 1.5em;
 	padding: 1.5em;
 	max-width: 100%;
-	border: 1px solid rgba(0,0,0,0.075);
+	border: 1px solid;
+	@include border-color(--light-border-color);
 	background: none;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	@include font-size(15);
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	line-height: 1.6;
 }
@@ -80,8 +81,7 @@ code,
 kbd,
 tt,
 var {
-	font-size: 15px;
-	font-size: 0.9375rem;
+	@include font-size(15);
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 

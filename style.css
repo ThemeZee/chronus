@@ -60,6 +60,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # - CSS Variables
 --------------------------------------------------------------*/
 :root {
+	--text-color: #303030;
+	--medium-text-color: #666;
+	--light-text-color: #999;
+	--dark-border-color: #303030;
+	--medium-border-color: rgba(0, 0, 0, 0.15);
+	--light-border-color: rgba(0, 0, 0, 0.075);
+	--link-color: #cc5555;
+	--link-hover-color: #303030;
+	--button-color: #cc5555;
+	--button-hover-color: #303030;
 	--text-font: "Raleway", arial, helvetica, sans-serif;
 	--title-font: "Rambla", arial, helvetica, sans-serif;
 	--navi-font: "Rambla", arial, helvetica, sans-serif;
@@ -293,6 +303,7 @@ input,
 select,
 textarea {
 	color: #303030;
+	color: var(--text-color);
 	font-size: 17px;
 	font-size: 1.0625rem;
 	font-family: "Raleway", arial, helvetica, sans-serif;
@@ -308,7 +319,8 @@ h4,
 h5,
 h6 {
 	clear: both;
-	margin: 1em 0 0.75em;
+	margin-top: 1em;
+	margin-bottom: 0.75em;
 	line-height: 1.4;
 	line-height: var(--title-line-height);
 }
@@ -367,7 +379,9 @@ pre {
 	margin-bottom: 1.5em;
 	padding: 1.5em;
 	max-width: 100%;
-	border: 1px solid rgba(0, 0, 0, 0.075);
+	border: 1px solid;
+	border-color: rgba(0, 0, 0, 0.075);
+	border-color: var(--light-border-color);
 	background: none;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -420,8 +434,11 @@ body {
 blockquote {
 	margin: 0 0 1.5em;
 	padding-left: 1.25em;
-	border-left: 4px solid #303030;
-	color: #777;
+	border-left: 4px solid;
+	border-color: #303030;
+	border-color: var(--dark-border-color);
+	color: #666;
+	color: var(--medium-text-color);
 	font-size: 18px;
 	font-size: 1.125rem;
 }
@@ -431,13 +448,15 @@ blockquote small {
 	display: block;
 	margin-top: 1em;
 	color: #303030;
+	color: var(--text-color);
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.75;
+	line-height: var(--text-line-height);
 }
 
-blockquote cite:before,
-blockquote small:before {
+blockquote cite::before,
+blockquote small::before {
 	content: "\2014\00a0";
 }
 
@@ -456,6 +475,7 @@ hr {
 	height: 1px;
 	border: 0;
 	background-color: rgba(0, 0, 0, 0.075);
+	background-color: var(--light-border-color);
 }
 
 ul,
@@ -501,23 +521,28 @@ table {
 th,
 td {
 	padding: 0.3em 0.6em;
-	border: 1px solid rgba(0, 0, 0, 0.075);
+	border: 1px solid;
+	border-color: rgba(0, 0, 0, 0.075);
+	border-color: var(--light-border-color);
 }
 
 a {
 	color: #cc5555;
+	color: var(--link-color);
 	text-decoration: none;
 }
 
 a:link,
 a:visited {
 	color: #cc5555;
+	color: var(--link-color);
 }
 
 a:hover,
 a:focus,
 a:active {
 	color: #303030;
+	color: var(--link-hover-color);
 }
 
 a:focus {
@@ -538,9 +563,12 @@ input[type="reset"],
 input[type="submit"] {
 	margin: 0;
 	padding: 0.6em 1em;
-	border: 1px solid rgba(0, 0, 0, 0.075);
+	border: 1px solid;
+	border-color: rgba(0, 0, 0, 0.075);
+	border-color: var(--light-border-color);
 	background: none;
 	color: #cc5555;
+	color: var(--button-color);
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 16px;
@@ -560,6 +588,7 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
 	color: #303030;
+	color: var(--button-hover-color);
 }
 
 input[type="text"],
@@ -570,9 +599,12 @@ input[type="search"],
 textarea {
 	padding: 0.3em 0.6em;
 	max-width: 100%;
-	border: 1px solid rgba(0, 0, 0, 0.075);
+	border: 1px solid;
+	border-color: rgba(0, 0, 0, 0.075);
+	border-color: var(--light-border-color);
 	background: none;
 	color: #666;
+	color: var(--medium-text-color);
 }
 
 input[type="text"]:focus,
@@ -581,8 +613,11 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-	border: 1px solid rgba(0, 0, 0, 0.2);
+	border: 1px solid;
+	border-color: rgba(0, 0, 0, 0.15);
+	border-color: var(--medium-border-color);
 	color: #303030;
+	color: var(--text-color);
 }
 
 textarea {

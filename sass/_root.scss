@@ -1,4 +1,20 @@
 :root {
+
+	// Text Colors
+	@include variable(--text-color, $themeColors);
+	@include variable(--medium-text-color, $themeColors);
+	@include variable(--light-text-color, $themeColors);
+	@include variable(--dark-border-color, $themeColors);
+	@include variable(--medium-border-color, $themeColors);
+	@include variable(--light-border-color, $themeColors);
+
+	// Links and Buttons
+	@include variable(--link-color, $themeColors);
+	@include variable(--link-hover-color, $themeColors);
+	@include variable(--button-color, $themeColors);
+	@include variable(--button-hover-color, $themeColors);
+
+	// Typography Styling
 	@include variable(--text-font, $themeFonts);
 	@include variable(--title-font, $themeFonts);
 	@include variable(--navi-font, $themeFonts);

@@ -14,6 +14,8 @@ $textColor: rgba(0, 0, 0, 0.9);
 
 // Theme Colors
 $themeColors: (
+
+	// Block Editor Colors
 	--primary-color                  : #c9493b,
 	--secondary-color                : #e36355,
 	--accent-color                   : #078896,
@@ -21,29 +23,42 @@ $themeColors: (
 	--light-gray-color               : #e4e4e4,
 	--gray-color                     : #848484,
 	--dark-gray-color                : #242424,
-	--text-color                     : rgba(0, 0, 0, 0.9),
-	--medium-text-color              : rgba(0, 0, 0, 0.7),
-	--light-text-color               : rgba(0, 0, 0, 0.5),
-	--link-color                     : #c9493b,
-	--link-hover-color               : #e36355,
-	--button-color                   : #c9493b,
-	--button-text-color              : #fff,
-	--button-hover-color             : #e36355,
-	--button-hover-text-color        : #fff,
-	--page-background-color          : #fff,
-	--page-border-color              : rgba(0, 0, 0, 0.1),
-	--page-light-bg-color            : rgba(0, 0, 0, 0.05),
+
+	// Text Colors
+	--text-color                     : #303030,
+	--medium-text-color              : #666,
+	--light-text-color               : #999,
+	--dark-border-color              : #303030,
+	--medium-border-color            : rgba(0, 0, 0, 0.15),
+	--light-border-color             : rgba(0, 0, 0, 0.075),
+
+	// Links and Buttons
+	--link-color                     : #cc5555,
+	--link-hover-color               : #303030,
+	--button-color                   : #cc5555,
+	--button-hover-color             : #303030,
+
+	// Header
 	--header-background-color        : #fff,
 	--header-text-color              : rgba(0, 0, 0, 0.9),
 	--header-text-hover-color        : #e36355,
 	--header-border-color            : rgba(0, 0, 0, 0.1),
+
+	// Posts
 	--title-color                    : #202020,
 	--title-hover-color              : #e36355,
+
+	// Widgets
+	--widget-title-color             : #2a4861,
+
+	// Footer Widgets
 	--footer-widgets-background-color: #252525,
 	--footer-widgets-text-color      : rgba(255, 255, 255, 0.5),
 	--footer-widgets-link-color      : rgba(255, 255, 255, 0.95),
 	--footer-widgets-link-hover-color: rgba(255, 255, 255, 0.5),
 	--footer-widgets-border-color    : rgba(255, 255, 255, 0.1),
+
+	// Footer
 	--footer-background-color        : #202020,
 	--footer-text-color              : rgba(255, 255, 255, 0.5),
 	--footer-link-color              : rgba(255, 255, 255, 0.95),
