@@ -63,6 +63,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	--text-color: #303030;
 	--medium-text-color: #666;
 	--light-text-color: #999;
+	--page-background-color: #fff;
 	--dark-border-color: #303030;
 	--medium-border-color: rgba(0, 0, 0, 0.15);
 	--light-border-color: rgba(0, 0, 0, 0.075);
@@ -70,6 +71,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	--link-hover-color: #303030;
 	--button-color: #cc5555;
 	--button-hover-color: #303030;
+	--navi-color: #303030;
+	--navi-hover-color: #cc5555;
+	--navi-submenu-color: #cc5555;
+	--navi-submenu-text-color: #fff;
+	--navi-submenu-hover-color: rgba(255, 255, 255, 0.5);
+	--navi-submenu-border-color: rgba(255, 255, 255, 0.1);
+	--title-color: #303030;
+	--title-hover-color: #cc5555;
+	--widget-title-color: #303030;
+	--widget-title-hover-color: #cc5555;
 	--text-font: "Raleway", arial, helvetica, sans-serif;
 	--title-font: "Rambla", arial, helvetica, sans-serif;
 	--navi-font: "Rambla", arial, helvetica, sans-serif;
@@ -707,7 +718,8 @@ textarea {
 	padding: 0 2.5em;
 	max-width: 1300px;
 	width: 100%;
-	background: #fff;
+	background-color: #fff;
+	background-color: var(--page-background-color);
 }
 
 .site-content {
@@ -759,7 +771,9 @@ textarea {
 --------------------------------------------------------------*/
 .site-header {
 	margin: 0 0 2.5em;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+	border-bottom: 1px solid;
+	border-color: rgba(0, 0, 0, 0.075);
+	border-color: var(--light-border-color);
 }
 
 .header-main {
@@ -786,6 +800,7 @@ textarea {
 	margin: 0.15em 0;
 	padding: 0;
 	color: #303030;
+	color: var(--title-color);
 	text-decoration: none;
 	font-size: 48px;
 	font-size: 3rem;
@@ -802,11 +817,13 @@ textarea {
 .site-title a:link,
 .site-title a:visited {
 	color: #303030;
+	color: var(--title-color);
 }
 
 .site-title a:hover,
 .site-title a:active {
 	color: #cc5555;
+	color: var(--title-hover-color);
 }
 
 .site-branding .custom-logo {
@@ -837,7 +854,9 @@ textarea {
 # - Navigation
 --------------------------------------------------------------*/
 .primary-navigation-wrap {
-	border-top: 1px solid rgba(0, 0, 0, 0.075);
+	border-top: 1px solid;
+	border-color: rgba(0, 0, 0, 0.075);
+	border-color: var(--light-border-color);
 }
 
 .primary-navigation {
@@ -849,6 +868,7 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #303030;
+	color: var(--navi-color);
 	list-style: none;
 	font-size: 20px;
 	font-size: 1.25rem;
@@ -893,6 +913,7 @@ textarea {
 .main-navigation ul a:link,
 .main-navigation ul a:visited {
 	color: #303030;
+	color: var(--navi-color);
 	text-decoration: none;
 }
 
@@ -900,6 +921,7 @@ textarea {
 .main-navigation ul a:active,
 .main-navigation ul a:focus {
 	color: #cc5555;
+	color: var(--navi-hover-color);
 }
 
 .main-navigation ul li.current-menu-item > a {
@@ -910,7 +932,8 @@ textarea {
 .main-navigation ul ul {
 	font-size: 16px;
 	font-size: 1rem;
-	background: #cc5555;
+	background-color: #cc5555;
+	background-color: var(--navi-submenu-color);
 }
 
 .is-amp-page .main-navigation ul button.toggled-on + ul,
@@ -920,18 +943,22 @@ textarea {
 
 .main-navigation ul ul a {
 	padding: 1em;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid;
+	border-color: rgba(255, 255, 255, 0.1);
+	border-color: var(--navi-submenu-border-color);
 }
 
 .main-navigation ul ul a:link,
 .main-navigation ul ul a:visited {
 	color: #fff;
+	color: var(--navi-submenu-text-color);
 }
 
 .main-navigation ul ul a:hover,
 .main-navigation ul ul a:active,
 .main-navigation ul ul a:focus {
 	color: rgba(255, 255, 255, 0.5);
+	color: var(--navi-submenu-hover-color);
 }
 
 /* Main Navigation Toggle */
@@ -942,6 +969,7 @@ textarea {
 	border: none;
 	background: none;
 	color: #303030;
+	color: var(--navi-color);
 	text-decoration: none;
 	font-size: 20px;
 	font-size: 1.25rem;
@@ -962,12 +990,14 @@ textarea {
 .primary-menu-toggle:focus {
 	outline: thin dotted;
 	color: #303030;
+	color: var(--navi-color);
 	background: none;
 }
 
 .primary-menu-toggle:hover,
 .primary-menu-toggle:active {
 	color: #cc5555;
+	color: var(--navi-hover-color);
 	background: none;
 	cursor: pointer;
 }
@@ -978,11 +1008,13 @@ textarea {
 	height: 24px;
 	vertical-align: top;
 	fill: #303030;
+	fill: var(--navi-color);
 }
 
 .primary-menu-toggle:hover .icon,
 .primary-menu-toggle:active .icon {
 	fill: #cc5555;
+	fill: var(--navi-hover-color);
 }
 
 .primary-menu-toggle[aria-expanded="true"] .icon-menu,
@@ -1008,6 +1040,7 @@ textarea {
 .main-navigation .dropdown-toggle:focus {
 	outline: thin dotted;
 	color: #303030;
+	color: var(--navi-color);
 	background: none;
 }
 
@@ -1022,12 +1055,14 @@ textarea {
 	height: 24px;
 	vertical-align: top;
 	fill: #303030;
+	fill: var(--navi-color);
 }
 
 .main-navigation .dropdown-toggle:hover .icon,
 .main-navigation .dropdown-toggle:active .icon,
 .main-navigation .dropdown-toggle:focus .icon {
 	fill: #cc5555;
+	fill: var(--navi-hover-color);
 }
 
 .main-navigation .dropdown-toggle.toggled-on .icon {
@@ -1044,12 +1079,14 @@ textarea {
 	width: 20px;
 	height: 20px;
 	fill: #fff;
+	fill: var(--navi-submenu-text-color);
 }
 
 .main-navigation ul ul .dropdown-toggle:hover .icon,
 .main-navigation ul ul .dropdown-toggle:active .icon,
 .main-navigation ul ul .dropdown-toggle:focus .icon {
 	fill: rgba(255, 255, 255, 0.5);
+	fill: var(--navi-submenu-hover-color);
 }
 
 /*--------------------------------------------------------------
@@ -2022,8 +2059,10 @@ object {
 }
 
 .site-footer {
-	border-top: 1px solid rgba(0, 0, 0, 0.075);
-	border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	border-color: rgba(0, 0, 0, 0.075);
+	border-color: var(--light-border-color);
 }
 
 .site-footer .site-info {

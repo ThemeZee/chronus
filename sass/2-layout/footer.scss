@@ -3,8 +3,9 @@
 }
 
 .site-footer {
-	border-top: 1px solid rgba(0,0,0,0.075);
-	border-bottom: 1px solid rgba(0,0,0,0.075);
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	@include border-color(--light-border-color);
 }
 
 .site-footer .site-info {

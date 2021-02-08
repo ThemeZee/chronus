@@ -1,6 +1,7 @@
 .site-header {
 	margin: 0 0 2.5em;
-	border-bottom: 1px solid rgba(0,0,0,0.075);
+	border-bottom: 1px solid;
+	@include border-color(--light-border-color);
 }
 
 .header-main {
@@ -26,7 +27,7 @@
 	display: block;
 	margin: 0.15em 0;
 	padding: 0;
-	color: #303030;
+	@include color(--title-color);
 	text-decoration: none;
 	@include font-size(48);
 	@include font-family(--title-font);
@@ -37,12 +38,12 @@
 
 .site-title a:link,
 .site-title a:visited {
-	color: #303030;
+	@include color(--title-color);
 }
 
 .site-title a:hover,
 .site-title a:active {
-	color: #cc5555;
+	@include color(--title-hover-color);
 }
 
 .site-branding .custom-logo {

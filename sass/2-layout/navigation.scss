@@ -1,5 +1,6 @@
 .primary-navigation-wrap {
-	border-top: 1px solid rgba(0, 0, 0, 0.075);
+	border-top: 1px solid;
+	@include border-color(--light-border-color);
 }
 
 .primary-navigation {
@@ -10,7 +11,7 @@
 .main-navigation ul {
 	margin: 0;
 	padding: 0;
-	color: #303030;
+	@include color(--navi-color);
 	list-style: none;
 	@include font-size(20);
 	@include font-family(--navi-font);
@@ -50,14 +51,14 @@
 .main-navigation ul a,
 .main-navigation ul a:link,
 .main-navigation ul a:visited {
-	color: #303030;
+	@include color(--navi-color);
 	text-decoration: none;
 }
 
 .main-navigation ul a:hover,
 .main-navigation ul a:active,
 .main-navigation ul a:focus {
-	color: #cc5555;
+	@include color(--navi-hover-color);
 }
 
 .main-navigation ul li.current-menu-item > a {
@@ -67,7 +68,7 @@
 /* Submenus */
 .main-navigation ul ul {
 	@include font-size(16);
-	background: #cc5555;
+	@include background(--navi-submenu-color);
 }
 
 .is-amp-page .main-navigation ul button.toggled-on + ul,
@@ -77,18 +78,19 @@
 
 .main-navigation ul ul a {
 	padding: 1em;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid;
+	@include border-color(--navi-submenu-border-color);
 }
 
 .main-navigation ul ul a:link,
 .main-navigation ul ul a:visited {
-	color: #fff;
+	@include color(--navi-submenu-text-color);
 }
 
 .main-navigation ul ul a:hover,
 .main-navigation ul ul a:active,
 .main-navigation ul ul a:focus {
-	color: rgba(255, 255, 255, 0.5);
+	@include color(--navi-submenu-hover-color);
 }
 
 /* Main Navigation Toggle */
@@ -98,7 +100,7 @@
 	padding: 0.75em 1em;
 	border: none;
 	background: none;
-	color: #303030;
+	@include color(--navi-color);
 	text-decoration: none;
 	@include font-size(20);
 	@include font-family(--navi-font);
@@ -114,13 +116,13 @@
 
 .primary-menu-toggle:focus {
 	outline: thin dotted;
-	color: #303030;
+	@include color(--navi-color);
 	background: none;
 }
 
 .primary-menu-toggle:hover,
 .primary-menu-toggle:active {
-	color: #cc5555;
+	@include color(--navi-hover-color);
 	background: none;
 	cursor: pointer;
 }
@@ -130,12 +132,12 @@
 	width: 24px;
 	height: 24px;
 	vertical-align: top;
-	fill: #303030;
+	@include fill(--navi-color);
 }
 
 .primary-menu-toggle:hover .icon,
 .primary-menu-toggle:active .icon {
-	fill: #cc5555;
+	@include fill(--navi-hover-color);
 }
 
 .primary-menu-toggle[aria-expanded="true"] .icon-menu,
@@ -160,7 +162,7 @@
 
 .main-navigation .dropdown-toggle:focus {
 	outline: thin dotted;
-	color: #303030;
+	@include color(--navi-color);
 	background: none;
 }
 
@@ -174,13 +176,13 @@
 	width: 24px;
 	height: 24px;
 	vertical-align: top;
-	fill: #303030;
+	@include fill(--navi-color);
 }
 
 .main-navigation .dropdown-toggle:hover .icon,
 .main-navigation .dropdown-toggle:active .icon,
 .main-navigation .dropdown-toggle:focus .icon {
-	fill: #cc5555;
+	@include fill(--navi-hover-color);
 }
 
 .main-navigation .dropdown-toggle.toggled-on .icon {
@@ -196,11 +198,11 @@
 .main-navigation ul ul .dropdown-toggle .icon {
 	width: 20px;
 	height: 20px;
-	fill: #fff;
+	@include fill(--navi-submenu-text-color);
 }
 
 .main-navigation ul ul .dropdown-toggle:hover .icon,
 .main-navigation ul ul .dropdown-toggle:active .icon,
 .main-navigation ul ul .dropdown-toggle:focus .icon {
-	fill: rgba(255, 255, 255, 0.5);
+	@include fill(--navi-submenu-hover-color);
 }

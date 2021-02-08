@@ -3,7 +3,7 @@
 	padding: 0 2.5em;
 	max-width: 1300px;
 	width: 100%;
-	background: #fff;
+	@include background(--page-background-color);
 }
 
 .site-content {
