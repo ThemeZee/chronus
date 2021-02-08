@@ -7,7 +7,7 @@
 .archive-title {
 	margin: 0;
 	padding: 0;
-	color: #303030;
+	@include color(--title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	@include font-size(20);

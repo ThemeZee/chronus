@@ -78,11 +78,11 @@
 		top: 0.1rem;
 		width: 14px;
 		height: 14px;
-		fill: #303030;
+		@include fill(--navi-color);
 	}
 
 	.main-navigation ul .menu-item-has-children > a:hover > .icon {
-		fill: #cc5555;
+		@include fill(--navi-hover-color);
 	}
 
 	.main-navigation ul ul .menu-item-has-children > a > .icon {
@@ -94,10 +94,10 @@
 		-webkit-transform: rotate(-90deg);
 		-ms-transform: rotate(-90deg);
 		transform: rotate(-90deg);
-		fill: #fff;
+		@include fill(--navi-submenu-text-color);
 	}
 
 	.main-navigation ul ul .menu-item-has-children > a:hover > .icon {
-		fill: rgba(255, 255, 255, 0.5);
+		@include fill(--navi-submenu-hover-color);
 	}
 }

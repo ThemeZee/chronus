@@ -14,7 +14,7 @@
 	display: block;
 	margin: 0;
 	padding: 0;
-	color: #303030;
+	@include color(--widget-title-color);
 	@include font-size(20);
 	@include font-family(--widget-title-font);
 	@include font-weight(--widget-title-font-weight);
@@ -31,8 +31,9 @@
 .widget ul li,
 .widget ol li {
 	padding: 0.4em 0;
-	border-top: 1px solid rgba(0, 0, 0, 0.075);
-	border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	@include border-color(--light-border-color);
 }
 
 .widget ul li + li {
@@ -51,13 +52,13 @@
 }
 
 .widget-title a:link,
-.widget-title a:visited  {
-	color: #303030;
+.widget-title a:visited {
+	@include color(--widget-title-color);
 }
 
 .widget-title a:hover,
-.widget-title a:active  {
-	color: #cc5555;
+.widget-title a:active {
+	@include color(--widget-title-hover-color);
 }
 
 /* Theme Search Widget */
@@ -98,10 +99,10 @@
 	margin: 4px 0 0;
 	width: 20px;
 	height: 20px;
-	fill: #cc5555;
+	@include fill(--button-color);
 }
 
 .search-form .search-submit:hover .icon-search,
 .search-form .search-submit:active .icon-search {
-	fill: #303030;
+	@include fill(--button-hover-color);
 }

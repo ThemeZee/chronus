@@ -19,9 +19,10 @@
 	display: inline-block;
 	margin: 0 0 2.5em;
 	padding: 0.6em 1em;
-	border: 1px solid rgba(0, 0, 0, 0.075);
+	border: 1px solid;
+	@include border-color(--light-border-color);
 	background: none;
-	color: #cc5555;
+	@include color(--button-color);
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 16px;
@@ -29,5 +30,5 @@
 }
 
 .infinite-scroll #infinite-handle span:hover {
-	color: #303030;
+	@include color(--button-hover-color);
 }

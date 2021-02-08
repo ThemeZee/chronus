@@ -50,8 +50,8 @@
 	font-size: 0.875rem;
 }
 
-.widget-magazine-posts .medium-post .entry-meta .meta-date:after,
-.widget-magazine-posts .small-post .entry-meta .meta-date:after {
+.widget-magazine-posts .medium-post .entry-meta .meta-date::after,
+.widget-magazine-posts .small-post .entry-meta .meta-date::after {
 	display: none;
 }
 
