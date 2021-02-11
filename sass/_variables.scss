@@ -9,9 +9,6 @@ $wideBlockWidth: 1120px;
 $contentFullwidth: 1280px;
 $wideBlockFullwidth: 1440px;
 
-// Text Color
-$textColor: rgba(0, 0, 0, 0.9);
-
 // Theme Colors
 $themeColors: (
 
@@ -54,20 +51,6 @@ $themeColors: (
 	--title-hover-color              : #cc5555,
 	--widget-title-color             : #303030,
 	--widget-title-hover-color       : #cc5555,
-
-	// Footer Widgets
-	--footer-widgets-background-color: #252525,
-	--footer-widgets-text-color      : rgba(255, 255, 255, 0.5),
-	--footer-widgets-link-color      : rgba(255, 255, 255, 0.95),
-	--footer-widgets-link-hover-color: rgba(255, 255, 255, 0.5),
-	--footer-widgets-border-color    : rgba(255, 255, 255, 0.1),
-
-	// Footer
-	--footer-background-color        : #202020,
-	--footer-text-color              : rgba(255, 255, 255, 0.5),
-	--footer-link-color              : rgba(255, 255, 255, 0.95),
-	--footer-link-hover-color        : rgba(255, 255, 255, 0.5),
-	--footer-border-color            : rgba(255, 255, 255, 0.1),
 );
 
 // Theme Fonts
