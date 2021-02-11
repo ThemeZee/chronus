@@ -75,7 +75,7 @@ if ( ! function_exists( 'chronus_setup' ) ) :
 		) ) );
 
 		// Add extra theme styling to the visual editor.
-		add_editor_style( array( 'css/editor-style.css', get_template_directory_uri() . '/assets/css/custom-fonts.css' ) );
+		add_editor_style( array( 'css/editor-style.css' ) );
 
 		// Add Theme Support for Selective Refresh in Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -197,22 +197,38 @@ add_action( 'wp_enqueue_scripts', 'chronus_scripts' );
 
 
 /**
- * Enqueue custom fonts.
- */
-function chronus_custom_fonts() {
-	wp_enqueue_style( 'chronus-custom-fonts', get_template_directory_uri() . '/assets/css/custom-fonts.css', array(), '20180413' );
+* Enqueue theme fonts.
+*/
+function chronus_theme_fonts() {
+	$fonts_url = chronus_get_fonts_url();
+
+	// Load Fonts if necessary.
+	if ( $fonts_url ) {
+		require_once get_theme_file_path( 'inc/wptt-webfont-loader.php' );
+		wp_enqueue_style( 'chronus-theme-fonts', wptt_get_webfont_url( $fonts_url ), array(), '20201110' );
+	}
 }
-add_action( 'wp_enqueue_scripts', 'chronus_custom_fonts', 1 );
-add_action( 'enqueue_block_editor_assets', 'chronus_custom_fonts', 1 );
+add_action( 'wp_enqueue_scripts', 'chronus_theme_fonts', 1 );
+add_action( 'enqueue_block_editor_assets', 'chronus_theme_fonts', 1 );
 
 
 /**
- * Enqueue editor styles for the new Gutenberg Editor.
+ * Retrieve webfont URL to load fonts locally.
  */
-function chronus_block_editor_assets() {
-	wp_enqueue_style( 'chronus-editor-styles', get_theme_file_uri( '/assets/css/gutenberg-styles.css' ), array(), '20191118', 'all' );
+function chronus_get_fonts_url() {
+	$font_families = array(
+		'Raleway:400,400italic,700,700italic',
+		'Rambla:400,400italic,700,700italic',
+	);
+
+	$query_args = array(
+		'family'  => urlencode( implode( '|', $font_families ) ),
+		'subset'  => urlencode( 'latin,latin-ext' ),
+		'display' => urlencode( 'swap' ),
+	);
+
+	return apply_filters( 'chronus_get_fonts_url', add_query_arg( $query_args, 'https://fonts.googleapis.com/css' ) );
 }
-add_action( 'enqueue_block_editor_assets', 'chronus_block_editor_assets' );
 
 
 /**

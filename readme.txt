@@ -151,15 +151,19 @@ Copyright: 2012-2015 Nicolas Gallagher and Jonathan Neal
 License: Licensed under MIT license (https://github.com/Keyamoon/svgxuse/blob/master/license)
 Copyright: 2017 IcoMoon.io
 
-5. Raleway Font - https://www.google.com/fonts/specimen/Raleway
+5. WPTT Webfont Loader - https://github.com/WPTT/webfont-loader
+License: Distributed under the terms of the MIT License (https://github.com/WPTT/webfont-loader/blob/master/LICENSE)
+Copyright: 2020 Ari Stathopoulos, WordPress Themes Team
+
+6. Raleway Font - https://www.google.com/fonts/specimen/Raleway
 License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
 Copyright: Pablo Impallari and Rodrigo Fuenzalida
 
-6. Rambla Font - https://www.google.com/fonts/specimen/Rambla
+7. Rambla Font - https://www.google.com/fonts/specimen/Rambla
 License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
 Copyright: Martin Sommaruga
 
-7. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
+8. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
 
 Image 1: https://pixabay.com/en/office-home-glasses-workspace-820390/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
