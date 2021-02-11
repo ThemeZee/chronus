@@ -75,7 +75,7 @@ if ( ! function_exists( 'chronus_setup' ) ) :
 		) ) );
 
 		// Add extra theme styling to the visual editor.
-		add_editor_style( array( 'css/editor-style.css' ) );
+		add_editor_style( array( 'assets/css/editor-style.css' ) );
 
 		// Add Theme Support for Selective Refresh in Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -229,6 +229,15 @@ function chronus_get_fonts_url() {
 
 	return apply_filters( 'chronus_get_fonts_url', add_query_arg( $query_args, 'https://fonts.googleapis.com/css' ) );
 }
+
+
+/**
+ * Enqueue editor styles for the new Gutenberg Editor.
+ */
+function chronus_block_editor_assets() {
+	wp_enqueue_style( 'chronus-editor-styles', get_theme_file_uri( '/assets/css/gutenberg-styles.css' ), array(), '20191118', 'all' );
+}
+add_action( 'enqueue_block_editor_assets', 'chronus_block_editor_assets' );
 
 
 /**
