@@ -26,6 +26,10 @@ For more information about Chronus please go to https://themezee.com/themes/chro
 
 == Changelog ==
 
+= 2.0 - 2021-02-13 =
+* added WPTT Webfont loader to host theme fonts locally
+* added CSS variables for theme colors
+
 = 1.9.2 - 2021-01-04 =
 * added support for Related Posts plugin to Centered Layout page template
 
