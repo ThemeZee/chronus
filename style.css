@@ -618,6 +618,16 @@ textarea {
 	color: var(--medium-text-color);
 }
 
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="url"]::placeholder,
+input[type="password"]::placeholder,
+input[type="search"]::placeholder,
+textarea::placeholder {
+	color: #999;
+	color: var(--light-text-color);
+}
+
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
@@ -881,7 +891,9 @@ textarea {
 }
 
 .main-navigation > ul {
-	border-top: 1px solid rgba(0, 0, 0, 0.075);
+	border-top: 1px solid;
+	border-color: rgba(0, 0, 0, 0.075);
+	border-color: var(--light-border-color);
 }
 
 /* Hide the menu on small screens when JavaScript is available. */

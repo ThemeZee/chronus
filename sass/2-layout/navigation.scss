@@ -20,7 +20,8 @@
 }
 
 .main-navigation > ul {
-	border-top: 1px solid rgba(0, 0, 0, 0.075);
+	border-top: 1px solid;
+	@include border-color(--light-border-color);
 }
 
 /* Hide the menu on small screens when JavaScript is available. */

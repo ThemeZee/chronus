@@ -41,6 +41,10 @@ textarea {
 	@include border-color(--light-border-color);
 	background: none;
 	@include color(--medium-text-color);
+
+	&::placeholder {
+		@include color(--light-text-color);
+	}
 }
 
 input[type="text"]:focus,
