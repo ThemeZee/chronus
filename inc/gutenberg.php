@@ -19,10 +19,10 @@ function chronus_gutenberg_support() {
 	// Define block color palette.
 	$color_palette = apply_filters( 'chronus_color_palette', array(
 		'primary_color'    => '#cc5555',
-		'secondary_color'  => '#5d7b94',
-		'tertiary_color'   => '#90aec7',
-		'accent_color'     => '#60945d',
-		'highlight_color'  => '#915d94',
+		'secondary_color'  => '#b33c3c',
+		'tertiary_color'   => '#992222',
+		'accent_color'     => '#91cc56',
+		'highlight_color'  => '#239999',
 		'light_gray_color' => '#f0f0f0',
 		'gray_color'       => '#999999',
 		'dark_gray_color'  => '#303030',

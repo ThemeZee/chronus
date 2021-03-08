@@ -61,10 +61,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 :root {
 	--primary-color: #cc5555;
-	--secondary-color: #5d7b94;
-	--tertiary-color: #90aec7;
-	--accent-color: #60945d;
-	--highlight-color: #915d94;
+	--secondary-color: #b33c3c;
+	--tertiary-color: #992222;
+	--accent-color: #91cc56;
+	--highlight-color: #239999;
 	--light-gray-color: #f0f0f0;
 	--gray-color: #999;
 	--dark-gray-color: #303030;
@@ -1483,25 +1483,25 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 
 .has-secondary-color,
 .wp-block-button__link.has-secondary-color {
-	color: #5d7b94;
+	color: #b33c3c;
 	color: var(--secondary-color);
 }
 
 .has-tertiary-color,
 .wp-block-button__link.has-tertiary-color {
-	color: #90aec7;
+	color: #992222;
 	color: var(--tertiary-color);
 }
 
 .has-accent-color,
 .wp-block-button__link.has-accent-color {
-	color: #60945d;
+	color: #91cc56;
 	color: var(--accent-color);
 }
 
 .has-highlight-color,
 .wp-block-button__link.has-highlight-color {
-	color: #915d94;
+	color: #239999;
 	color: var(--highlight-color);
 }
 
@@ -1542,25 +1542,25 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 
 .has-secondary-background-color,
 .has-secondary-background-color[class] {
-	background-color: #5d7b94;
+	background-color: #b33c3c;
 	background-color: var(--secondary-color);
 }
 
 .has-tertiary-background-color,
 .has-tertiary-background-color[class] {
-	background-color: #90aec7;
+	background-color: #992222;
 	background-color: var(--tertiary-color);
 }
 
 .has-accent-background-color,
 .has-accent-background-color[class] {
-	background-color: #60945d;
+	background-color: #91cc56;
 	background-color: var(--accent-color);
 }
 
 .has-highlight-background-color,
 .has-highlight-background-color[class] {
-	background-color: #915d94;
+	background-color: #239999;
 	background-color: var(--highlight-color);
 }
 
