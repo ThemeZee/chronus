@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/chronus/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Chronus is a fast and lightweight WordPress Theme created for magazines, news websites and personal blogs. The Featured Content section and flexible Magazine Widgets give you the ability to highlight your most important posts on the home page. The minimalistic and responsive design focuses on your content and looks great on any screen size.
-Version: 2.0.1
+Version: 2.0.2
 Requires at least: 5.2
 Tested up to: 5.7
 Requires PHP: 5.6
@@ -2576,8 +2576,8 @@ ul.related-posts-list {
 	margin-right: 1em;
 }
 
-.tzwb-posts-list .tzwb-entry-meta .tzwb-meta-date:after,
-.tzwb-posts-list .tzwb-entry-meta .tzwb-meta-author:after {
+.tzwb-posts-list .tzwb-entry-meta .tzwb-meta-date::after,
+.tzwb-posts-list .tzwb-entry-meta .tzwb-meta-author::after {
 	display: none;
 }
 
@@ -2602,6 +2602,7 @@ ul.related-posts-list {
 
 .tzwb-comments-list .tzwb-comment-date {
 	color: #999;
+	color: var(--light-text-color);
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -2634,8 +2635,11 @@ ul.related-posts-list {
 	display: block;
 	margin: 0;
 	padding: 0.5em 0.8em;
-	border: 1px solid rgba(0, 0, 0, 0.075);
+	border: 1px solid;
+	border-color: rgba(0, 0, 0, 0.075);
+	border-color: var(--light-border-color);
 	color: #cc5555;
+	color: var(--button-color);
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 14px;
@@ -2645,11 +2649,13 @@ ul.related-posts-list {
 .tzwb-tabbed-content .tzwb-tabnavi li a:link,
 .tzwb-tabbed-content .tzwb-tabnavi li a:visited {
 	color: #cc5555;
+	color: var(--button-color);
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:hover,
 .tzwb-tabbed-content .tzwb-tabnavi li a:active {
 	color: #303030;
+	color: var(--button-hover-color);
 	text-decoration: none;
 }
 
@@ -2659,6 +2665,7 @@ ul.related-posts-list {
 
 .tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
 	color: #303030;
+	color: var(--button-hover-color);
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent {
@@ -2685,7 +2692,9 @@ ul.related-posts-list {
 	display: block;
 	margin: 0 5px 5px 0;
 	padding: 0.4em 0.5em;
-	border: 1px solid rgba(0, 0, 0, 0.075);
+	border: 1px solid;
+	border-color: rgba(0, 0, 0, 0.075);
+	border-color: var(--light-border-color);
 }
 
 .tzwb-social-icons .social-icons-menu li a .icon {
@@ -2694,10 +2703,12 @@ ul.related-posts-list {
 	height: 24px;
 	vertical-align: middle;
 	fill: #cc5555;
+	fill: var(--button-color);
 }
 
 .tzwb-social-icons .social-icons-menu li a:hover .icon {
 	fill: #303030;
+	fill: var(--button-hover-color);
 }
 
 /*--------------------------------------------------------------

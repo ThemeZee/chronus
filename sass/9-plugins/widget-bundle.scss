@@ -45,8 +45,8 @@
 	margin-right: 1em;
 }
 
-.tzwb-posts-list .tzwb-entry-meta .tzwb-meta-date:after,
-.tzwb-posts-list .tzwb-entry-meta .tzwb-meta-author:after {
+.tzwb-posts-list .tzwb-entry-meta .tzwb-meta-date::after,
+.tzwb-posts-list .tzwb-entry-meta .tzwb-meta-author::after {
 	display: none;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .tzwb-comments-list .tzwb-comment-date {
-	color: #999;
+	@include color(--light-text-color);
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -103,8 +103,9 @@
 	display: block;
 	margin: 0;
 	padding: 0.5em 0.8em;
-	border: 1px solid rgba(0,0,0,0.075);
-	color: #cc5555;
+	border: 1px solid;
+	@include border-color(--light-border-color);
+	@include color(--button-color);
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 14px;
@@ -112,13 +113,13 @@
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:link,
-.tzwb-tabbed-content .tzwb-tabnavi li a:visited  {
-	color: #cc5555;
+.tzwb-tabbed-content .tzwb-tabnavi li a:visited {
+	@include color(--button-color);
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:hover,
 .tzwb-tabbed-content .tzwb-tabnavi li a:active {
-	color: #303030;
+	@include color(--button-hover-color);
 	text-decoration: none;
 }
 
@@ -127,7 +128,7 @@
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
-	color: #303030;
+	@include color(--button-hover-color);
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent {
@@ -154,7 +155,8 @@
 	display: block;
 	margin: 0 5px 5px 0;
 	padding: 0.4em 0.5em;
-	border: 1px solid rgba(0,0,0,0.075);
+	border: 1px solid;
+	@include border-color(--light-border-color);
 }
 
 .tzwb-social-icons .social-icons-menu li a .icon {
@@ -162,9 +164,9 @@
 	width: 24px;
 	height: 24px;
 	vertical-align: middle;
-	fill: #cc5555;
+	@include fill(--button-color);
 }
 
 .tzwb-social-icons .social-icons-menu li a:hover .icon {
-	fill: #303030;
+	@include fill(--button-hover-color);
 }

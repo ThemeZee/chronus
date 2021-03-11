@@ -26,6 +26,9 @@ For more information about Chronus please go to https://themezee.com/themes/chro
 
 == Changelog ==
 
+= 2.0.2 - 2021-03-11 =
+* added CSS variables for Widget Bundle and Related Posts plugin styling
+
 = 2.0.1 - 2021-03-09 =
 * updated CSS variables for colors
 * updated Block Editor color palette
