@@ -16,6 +16,8 @@ get_header(); ?>
 		// Display Magazine Homepage Widgets.
 		chronus_magazine_widgets();
 
+		do_action( 'chronus_before_blog' );
+
 		if ( have_posts() ) :
 
 			chronus_blog_title();

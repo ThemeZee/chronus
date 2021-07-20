@@ -14,6 +14,8 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', 'single' );
 
+			do_action( 'chronus_after_posts' );
+
 			chronus_related_posts();
 
 			comments_template();
