@@ -81,6 +81,35 @@ function chronus_gutenberg_support() {
 			'color' => '#000000',
 		),
 	) ) );
+
+	// Add theme support for font sizes.
+	add_theme_support( 'editor-font-sizes', apply_filters( 'chronus_editor_font_sizes_args', array(
+		array(
+			'name' => esc_html_x( 'Small', 'block font size', 'chronus' ),
+			'size' => 16,
+			'slug' => 'small',
+		),
+		array(
+			'name' => esc_html_x( 'Medium', 'block font size', 'chronus' ),
+			'size' => 24,
+			'slug' => 'medium',
+		),
+		array(
+			'name' => esc_html_x( 'Large', 'block font size', 'chronus' ),
+			'size' => 36,
+			'slug' => 'large',
+		),
+		array(
+			'name' => esc_html_x( 'Extra Large', 'block font size', 'chronus' ),
+			'size' => 48,
+			'slug' => 'extra-large',
+		),
+		array(
+			'name' => esc_html_x( 'Huge', 'block font size', 'chronus' ),
+			'size' => 64,
+			'slug' => 'huge',
+		),
+	) ) );
 }
 add_action( 'after_setup_theme', 'chronus_gutenberg_support' );
 
