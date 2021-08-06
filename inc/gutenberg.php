@@ -91,7 +91,7 @@ add_action( 'after_setup_theme', 'chronus_gutenberg_support' );
 function chronus_block_editor_assets() {
 
 	// Enqueue Editor Styling.
-	wp_enqueue_style( 'chronus-editor-styles', get_theme_file_uri( '/assets/css/gutenberg-styles.css' ), array(), '20210306', 'all' );
+	wp_enqueue_style( 'chronus-editor-styles', get_theme_file_uri( '/assets/css/editor-styles.css' ), array(), '20210806', 'all' );
 
 	// Enqueue Page Template Switcher Editor plugin.
 	#wp_enqueue_script( 'chronus-page-template-switcher', get_theme_file_uri( '/assets/js/page-template-switcher.js' ), array( 'wp-blocks', 'wp-element', 'wp-edit-post' ), '20210306' );
