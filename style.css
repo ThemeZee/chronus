@@ -452,7 +452,7 @@ body {
 }
 
 blockquote {
-	margin: 0 0 1.5em;
+	margin: 1.5em 0;
 	padding-left: 1.25em;
 	border-left: 4px solid;
 	border-color: #303030;

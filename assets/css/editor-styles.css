@@ -61,6 +61,8 @@
 
 .wp-block {
 	max-width: 880px;
+	margin-top: 0;
+	margin-bottom: 1.5em;
 }
 
 .wp-block[data-align="wide"] {
@@ -95,8 +97,8 @@
 body.block-editor-page .editor-post-title__block .editor-post-title__input {
 	color: #303030;
 	color: var(--title-color);
-	font-size: 20px;
-	font-size: 1.25rem;
+	font-size: 24px;
+	font-size: 1.5rem;
 	font-family: "Rambla", arial, helvetica, sans-serif;
 	font-family: var(--title-font);
 	font-weight: bold;
@@ -105,28 +107,26 @@ body.block-editor-page .editor-post-title__block .editor-post-title__input {
 	text-transform: var(--title-text-transform);
 	line-height: 1.4;
 	line-height: var(--title-line-height);
-	border-color: #303030;
-	border-color: var(--title-color);
+}
+
+@media only screen and (min-width: 480px) {
+	body.block-editor-page .editor-post-title__block .editor-post-title__input {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
 }
 
 @media only screen and (min-width: 640px) {
 	body.block-editor-page .editor-post-title__block .editor-post-title__input {
-		font-size: 22px;
-		font-size: 1.375rem;
+		font-size: 32px;
+		font-size: 2rem;
 	}
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1120px) {
 	body.block-editor-page .editor-post-title__block .editor-post-title__input {
-		font-size: 24px;
-		font-size: 1.5rem;
-	}
-}
-
-@media only screen and (min-width: 1280px) {
-	body.block-editor-page .editor-post-title__block .editor-post-title__input {
-		font-size: 28px;
-		font-size: 1.75rem;
+		font-size: 36px;
+		font-size: 2.25rem;
 	}
 }
 
@@ -148,7 +148,7 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 --------------------------------------------------------------*/
 
 /* Typography */
-.editor-styles-wrapper {
+.edit-post-visual-editor__content-area .editor-styles-wrapper {
 	color: #303030;
 	color: var(--text-color);
 	font-size: 16px;
@@ -163,8 +163,8 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 	font-size: inherit;
 	line-height: 1.75;
 	line-height: var(--text-line-height);
-	margin-top: 1rem;
-	margin-bottom: 1.5rem;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 }
 
 .editor-styles-wrapper .mce-content-body {
@@ -172,7 +172,7 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 	line-height: var(--text-line-height);
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 640px) {
 	.editor-styles-wrapper {
 		font-size: 17px;
 		font-size: 1.0625rem;
@@ -185,8 +185,8 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 }
 
 .editor-styles-wrapper hr {
-	margin-top: 1.75rem;
-	margin-bottom: 1.75rem;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 	height: 1px;
 	border: 0;
 	background-color: rgba(0, 0, 0, 0.075);
@@ -194,9 +194,9 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 }
 
 .editor-styles-wrapper pre {
-	margin-top: 1.75rem;
-	margin-bottom: 1.75rem;
-	padding: 1rem 1.25rem;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	padding: 1.5em;
 	border: 1px solid;
 	color: #303030;
 	color: var(--text-color);
@@ -239,14 +239,6 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 	clear: both;
 	margin-top: 1em;
 	margin-bottom: 0.75em;
-	color: #303030;
-	color: var(--title-color);
-	font-family: "Rambla", arial, helvetica, sans-serif;
-	font-family: var(--title-font);
-	font-weight: bold;
-	font-weight: var(--title-font-weight);
-	text-transform: none;
-	text-transform: var(--title-text-transform);
 	line-height: 1.4;
 	line-height: var(--title-line-height);
 }
@@ -262,47 +254,48 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 }
 
 .editor-styles-wrapper h1 {
+	font-size: 36px;
+	font-size: 2.25rem;
+}
+
+.editor-styles-wrapper h2 {
 	font-size: 28px;
 	font-size: 1.75rem;
 }
 
-.editor-styles-wrapper h2 {
+.editor-styles-wrapper h3 {
 	font-size: 24px;
 	font-size: 1.5rem;
 }
 
-.editor-styles-wrapper h3 {
+.editor-styles-wrapper h4 {
 	font-size: 22px;
 	font-size: 1.375rem;
 }
 
-.editor-styles-wrapper h4 {
+.editor-styles-wrapper h5 {
 	font-size: 20px;
 	font-size: 1.25rem;
 }
 
-.editor-styles-wrapper h5 {
+.editor-styles-wrapper h6 {
 	font-size: 19px;
 	font-size: 1.1875rem;
-}
-
-.editor-styles-wrapper h6 {
-	font-size: 18px;
-	font-size: 1.125rem;
 }
 
 /* Blockquotes */
 .editor-styles-wrapper blockquote,
 .wp-block-quote {
-	margin-top: 1.75rem;
-	margin-bottom: 1.75rem;
-	padding-left: 1.5rem;
-	border-left: 5px solid;
-	border-color: rgba(0, 0, 0, 0.075);
-	border-color: var(--light-border-color);
-	color: #999;
-	color: var(--light-text-color);
-	font-family: Georgia, "Times New Roman", Times, serif;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	padding: 1.5em;
+	border-left: 4px solid;
+	border-color: #303030;
+	border-color: var(--dark-border-color);
+	color: #666;
+	color: var(--medium-text-color);
+	font-size: 18px;
+	font-size: 1.125rem;
 }
 
 .editor-styles-wrapper blockquote p {
@@ -339,9 +332,9 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 /* Lists */
 .editor-styles-wrapper ul,
 .editor-styles-wrapper ol {
-	margin-top: 1.75rem;
-	margin-bottom: 1.75rem;
-	padding: 0 0 0 1.5rem;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	padding: 0 0 0 1.25em;
 }
 
 .editor-styles-wrapper ul {
@@ -361,8 +354,8 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 
 /* Tables */
 .editor-styles-wrapper table {
-	margin-top: 1.75rem;
-	margin-bottom: 1.75rem;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 	width: 100%;
 	border: none;
 	table-layout: fixed;
@@ -396,8 +389,8 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 .wp-block-image figcaption,
 .wp-block-audio figcaption,
 .wp-block-table figcaption {
-	margin-top: 0.5rem;
-	margin-bottom: 1.5rem;
+	margin-top: 0.5em;
+	margin-bottom: 1.5em;
 	font-size: 16px;
 	font-size: 1rem;
 	color: #666;
@@ -748,11 +741,6 @@ p.has-background {
 	.wp-block-column:not(:first-child) {
 		margin-left: 2em;
 	}
-}
-
-/* Group Block */
-.wp-block-group.has-background > .wp-block-group__inner-container > .wp-block:last-of-type {
-	margin-bottom: 0;
 }
 
 /* Editor Block Styles */
