@@ -205,10 +205,11 @@
 .wp-block-image figcaption,
 .wp-block-audio figcaption,
 .wp-block-table figcaption {
-	margin-top: 0.5em;
-	margin-bottom: 1.5em;
-	@include font-size(16);
+	margin-top: 0.5rem;
+	margin-bottom: 1.5rem;
+	@include font-size(14);
 	@include color(--medium-text-color);
+	text-align: center;
 }
 
 .wp-block-image figcaption {

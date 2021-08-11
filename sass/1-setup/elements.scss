@@ -100,6 +100,16 @@ td {
 	@include border-color(--light-border-color);
 }
 
+th {
+	font-weight: normal;
+	text-align: initial;
+	background: rgba(0, 0, 0, 0.05);
+}
+
+tfoot td {
+	background: rgba(0, 0, 0, 0.05);
+}
+
 a {
 	@include color(--link-color);
 	text-decoration: none;

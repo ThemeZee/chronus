@@ -23,7 +23,7 @@
 .wp-block-latest-posts__post-date,
 .wp-block-latest-posts__post-author {
 	@include color(--light-text-color);
-	@include font-size(16);
+	@include font-size(15);
 }
 
 /* Search Block */
