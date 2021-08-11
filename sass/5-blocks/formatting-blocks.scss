@@ -8,7 +8,7 @@
 .wp-block-gallery,
 .wp-block-cover,
 .wp-block-table {
-	margin-bottom: 1.75rem;
+	margin-bottom: 1.5em;
 }
 
 /* Paragraph Block */
@@ -28,6 +28,12 @@ p.has-background {
 }
 
 /* Separator Block */
+.wp-block-separator {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	border: none;
+}
+
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots),
 .wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots) {
 	margin-left: auto;

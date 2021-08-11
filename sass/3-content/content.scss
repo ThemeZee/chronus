@@ -47,6 +47,10 @@ article,
 	text-decoration: underline;
 }
 
+.entry-content > p:first-child {
+	margin-top: 1em;
+}
+
 /* Page Links | wp_link_pages() */
 .page-links {
 	clear: both;
