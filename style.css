@@ -386,16 +386,13 @@ i {
 	font-style: italic;
 }
 
-blockquote {
-	margin: 0 1.5em;
-}
-
 address {
 	margin: 0 0 1.5em;
 }
 
 pre {
 	overflow: auto;
+	margin-top: 1.5em;
 	margin-bottom: 1.5em;
 	padding: 1.5em;
 	max-width: 100%;
@@ -532,7 +529,8 @@ img {
 }
 
 table {
-	margin: 0 0 1.5em;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 	width: 100%;
 	border: none;
 	table-layout: fixed;
@@ -1480,6 +1478,11 @@ p.has-background {
 }
 
 /* Button Block */
+.wp-block-button {
+	font-size: 17px;
+	font-size: 1.0625rem;
+}
+
 .wp-block-button.aligncenter {
 	text-align: center;
 }
@@ -1490,9 +1493,8 @@ p.has-background {
 	border: none;
 	border-radius: 0;
 	color: inherit;
+	font-size: inherit;
 	text-decoration: none;
-	font-size: 17px;
-	font-size: 1.0625rem;
 	font-weight: bold;
 }
 
@@ -1955,7 +1957,8 @@ p.has-background {
 	margin: 0 0 1.25rem;
 }
 
-.widget-title {
+.widget-title,
+.is-style-widget-title {
 	display: block;
 	margin: 0;
 	padding: 0;

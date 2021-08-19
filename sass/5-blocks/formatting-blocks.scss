@@ -85,6 +85,10 @@ p.has-background {
 }
 
 /* Button Block */
+.wp-block-button {
+	@include font-size(17);
+}
+
 .wp-block-button.aligncenter {
 	text-align: center;
 }
@@ -95,8 +99,8 @@ p.has-background {
 	border: none;
 	border-radius: 0;
 	color: inherit;
+	font-size: inherit;
 	text-decoration: none;
-	@include font-size(17);
 	font-weight: bold;
 }
 
@@ -204,6 +208,7 @@ p.has-background {
 	padding: 0;
 	@include font-size(28);
 }
+
 .wp-block-pullquote p {
 	font-size: inherit;
 	line-height: inherit;

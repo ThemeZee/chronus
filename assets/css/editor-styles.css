@@ -492,6 +492,11 @@ p.has-background {
 }
 
 /* Button Block */
+.wp-block-button {
+	font-size: 17px;
+	font-size: 1.0625rem;
+}
+
 .wp-block-button.aligncenter {
 	text-align: center;
 }
@@ -502,9 +507,8 @@ p.has-background {
 	border: none;
 	border-radius: 0;
 	color: inherit;
+	font-size: inherit;
 	text-decoration: none;
-	font-size: 17px;
-	font-size: 1.0625rem;
 	font-weight: bold;
 }
 
@@ -764,11 +768,10 @@ p.has-background {
 
 /* Editor Block Styles */
 .editor-styles-wrapper .wp-block-heading.is-style-widget-title {
-	padding: 0.5rem 0.75rem;
-	color: var(--widget-title-text-color);
-	background-color: var(--widget-title-background-color);
-	font-size: 15px;
-	font-size: 0.9375rem;
+	color: #303030;
+	color: var(--widget-title-color);
+	font-size: 20px;
+	font-size: 1.25rem;
 	font-family: "Rambla", arial, helvetica, sans-serif;
 	font-family: var(--widget-title-font);
 	font-weight: normal;
