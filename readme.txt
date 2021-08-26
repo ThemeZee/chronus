@@ -26,6 +26,10 @@ For more information about Chronus please go to https://themezee.com/themes/chro
 
 == Changelog ==
 
+= 2.0.5 - 2021-08-26 =
+* fixed table layout styling
+* fixed responsive images with Classic Editor
+
 = 2.0.4 - 2021-08-19 =
 * added Widget Title block style
 * improved Block styling on frontend and Block Editor
