@@ -43,12 +43,16 @@ article,
 	@include border-color(--light-border-color);
 }
 
+.entry-content {
+	margin-top: 1em;
+}
+
 .entry-content a {
 	text-decoration: underline;
 }
 
-.entry-content > p:first-child {
-	margin-top: 1em;
+.entry-content > *:first-child {
+	margin-top: 0;
 }
 
 /* Page Links | wp_link_pages() */
