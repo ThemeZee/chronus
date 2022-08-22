@@ -26,6 +26,9 @@ For more information about Chronus please go to https://themezee.com/themes/chro
 
 == Changelog ==
 
+= 2.0.9 - 2022-08-22 =
+* updated footer credit link
+
 = 2.0.8 - 2022-07-12 =
 * added block support for custom spacing and line heights
 * improved styling of columns block
