@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*
 Theme Name: Chronus
 Theme URI: https://themezee.com/themes/chronus/
@@ -164,7 +166,7 @@ abbr[title] {
 
 b,
 strong {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 dfn {
@@ -218,7 +220,7 @@ kbd,
 pre,
 samp {
 	font-size: 1em;
-	font-family: monospace, monospace;
+	font-family: monospace;
 }
 
 button,
@@ -300,7 +302,7 @@ textarea {
 }
 
 optgroup {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 table {
@@ -325,7 +327,7 @@ textarea {
 	color: var(--text-color);
 	font-size: 17px;
 	font-size: 1.0625rem;
-	font-family: "Raleway", arial, helvetica, sans-serif;
+	font-family: Raleway, arial, helvetica, sans-serif;
 	font-family: var(--text-font);
 	line-height: 1.75;
 	line-height: var(--text-line-height);
@@ -474,7 +476,7 @@ blockquote small {
 
 blockquote cite::before,
 blockquote small::before {
-	content: "\2014\00a0";
+	content: "— ";
 }
 
 blockquote em,
@@ -516,7 +518,7 @@ li > ol {
 }
 
 dt {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 dd {
@@ -545,7 +547,7 @@ td {
 }
 
 th {
-	font-weight: normal;
+	font-weight: 400;
 	text-align: initial;
 	background: rgba(0, 0, 0, 0.05);
 }
@@ -598,7 +600,7 @@ input[type="submit"] {
 	color: #cc5555;
 	color: var(--button-color);
 	text-decoration: none;
-	font-weight: bold;
+	font-weight: 700;
 	font-size: 16px;
 	font-size: 1rem;
 }
@@ -691,7 +693,7 @@ textarea {
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	color: #21759b;
 	text-decoration: none;
-	font-weight: bold;
+	font-weight: 700;
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: normal;
@@ -721,19 +723,19 @@ textarea {
 /*--------------------------------------------------------------
 # - Clearings
 --------------------------------------------------------------*/
-.clearfix:before,
-.clearfix:after,
-.post-navigation .nav-links:before,
-.post-navigation .nav-links:after,
-.comment-navigation:before,
-.comment-navigation:after {
+.clearfix::before,
+.clearfix::after,
+.post-navigation .nav-links::before,
+.post-navigation .nav-links::after,
+.comment-navigation::before,
+.comment-navigation::after {
 	display: table;
 	content: "";
 }
 
-.clearfix:after,
-.post-navigation .nav-links:after,
-.comment-navigation:after {
+.clearfix::after,
+.post-navigation .nav-links::after,
+.comment-navigation::after {
 	clear: both;
 }
 
@@ -831,9 +833,9 @@ textarea {
 	text-decoration: none;
 	font-size: 48px;
 	font-size: 3rem;
-	font-family: "Rambla", arial, helvetica, sans-serif;
+	font-family: Rambla, arial, helvetica, sans-serif;
 	font-family: var(--title-font);
-	font-weight: bold;
+	font-weight: 700;
 	font-weight: var(--title-font-weight);
 	text-transform: none;
 	text-transform: var(--title-text-transform);
@@ -899,9 +901,9 @@ textarea {
 	list-style: none;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-family: "Rambla", arial, helvetica, sans-serif;
+	font-family: Rambla, arial, helvetica, sans-serif;
 	font-family: var(--navi-font);
-	font-weight: normal;
+	font-weight: 400;
 	font-weight: var(--navi-font-weight);
 	text-transform: none;
 	text-transform: var(--navi-text-transform);
@@ -1002,9 +1004,9 @@ textarea {
 	text-decoration: none;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-family: "Rambla", arial, helvetica, sans-serif;
+	font-family: Rambla, arial, helvetica, sans-serif;
 	font-family: var(--navi-font);
-	font-weight: normal;
+	font-weight: 400;
 	font-weight: var(--navi-font-weight);
 	text-transform: none;
 	text-transform: var(--navi-text-transform);
@@ -1140,9 +1142,9 @@ article,
 	word-wrap: break-word;
 	font-size: 36px;
 	font-size: 2.25rem;
-	font-family: "Rambla", arial, helvetica, sans-serif;
+	font-family: Rambla, arial, helvetica, sans-serif;
 	font-family: var(--title-font);
-	font-weight: bold;
+	font-weight: 700;
 	font-weight: var(--title-font-weight);
 	text-transform: none;
 	text-transform: var(--title-text-transform);
@@ -1192,7 +1194,7 @@ article,
 	clear: both;
 	margin: 0 0 2em;
 	word-spacing: 0.5em;
-	font-weight: bold;
+	font-weight: 700;
 	font-size: 16px;
 	font-size: 1rem;
 }
@@ -1212,7 +1214,7 @@ article,
 	margin: 0 1em 0 1em;
 	color: rgba(0, 0, 0, 0.15);
 	color: var(--medium-border-color);
-	content: "\007c";
+	content: "|";
 }
 
 /* Hide post meta if they are deactivated in settings */
@@ -1246,11 +1248,11 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .more-link::after {
-	content: " \00BB";
+	content: " »";
 }
 
 /* Post Navigation */
@@ -1277,17 +1279,17 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 
 .post-navigation .nav-links .nav-link-text {
 	display: block;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .post-navigation .nav-links .nav-previous .nav-link-text::before {
 	margin-right: 3px;
-	content: "\00AB";
+	content: "«";
 }
 
 .post-navigation .nav-links .nav-next .nav-link-text::after {
 	margin-left: 4px;
-	content: "\00BB";
+	content: "»";
 }
 
 .post-navigation .nav-links .entry-title {
@@ -1314,9 +1316,9 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 	word-wrap: break-word;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-family: "Rambla", arial, helvetica, sans-serif;
+	font-family: Rambla, arial, helvetica, sans-serif;
 	font-family: var(--widget-title-font);
-	font-weight: normal;
+	font-weight: 400;
 	font-weight: var(--widget-title-font-weight);
 	text-transform: none;
 	text-transform: var(--widget-title-text-transform);
@@ -1346,9 +1348,9 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 	text-decoration: none;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-family: "Rambla", arial, helvetica, sans-serif;
+	font-family: Rambla, arial, helvetica, sans-serif;
 	font-family: var(--widget-title-font);
-	font-weight: normal;
+	font-weight: 400;
 	font-weight: var(--widget-title-font-weight);
 	text-transform: none;
 	text-transform: var(--widget-title-text-transform);
@@ -1382,7 +1384,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 	color: #cc5555;
 	color: var(--button-color);
 	text-decoration: none;
-	font-weight: bold;
+	font-weight: 700;
 	font-size: 16px;
 	font-size: 1rem;
 }
@@ -1417,7 +1419,7 @@ p.has-background {
 .has-drop-cap:not(:focus)::first-letter {
 	font-size: 4.5rem;
 	line-height: 0.7;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 /* Code Block */
@@ -1499,7 +1501,7 @@ p.has-background {
 	color: inherit;
 	font-size: inherit;
 	text-decoration: none;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .wp-block-button__link:link,
@@ -1989,9 +1991,9 @@ div.wp-block-columns {
 	color: var(--widget-title-color);
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-family: "Rambla", arial, helvetica, sans-serif;
+	font-family: Rambla, arial, helvetica, sans-serif;
 	font-family: var(--widget-title-font);
-	font-weight: normal;
+	font-weight: 400;
 	font-weight: var(--widget-title-font-weight);
 	text-transform: none;
 	text-transform: var(--widget-title-text-transform);
@@ -2224,9 +2226,9 @@ div.wp-block-columns {
 	word-wrap: break-word;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-family: "Rambla", arial, helvetica, sans-serif;
+	font-family: Rambla, arial, helvetica, sans-serif;
 	font-family: var(--widget-title-font);
-	font-weight: normal;
+	font-weight: 400;
 	font-weight: var(--widget-title-font-weight);
 	text-transform: none;
 	text-transform: var(--widget-title-text-transform);
@@ -2310,14 +2312,14 @@ div.wp-block-columns {
 	float: right;
 }
 
-.comment-navigation .nav-previous a:before {
+.comment-navigation .nav-previous a::before {
 	margin-right: 3px;
-	content: "\00AB";
+	content: "«";
 }
 
-.comment-navigation .nav-next a:after {
+.comment-navigation .nav-next a::after {
 	margin-left: 4px;
-	content: "\00BB";
+	content: "»";
 }
 
 /* Comment Form */
@@ -2328,7 +2330,7 @@ div.wp-block-columns {
 .comment-form label {
 	display: inline-block;
 	min-width: 150px;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .comment-form textarea {
@@ -2342,13 +2344,13 @@ div.wp-block-columns {
 .comment-form input[type="checkbox"] + label {
 	display: inline;
 	padding-left: 0.5em;
-	font-weight: normal;
+	font-weight: 400;
 }
 
 .comment-reply-title small a {
 	margin-left: 1em;
 	text-decoration: underline;
-	font-weight: normal;
+	font-weight: 400;
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -2518,7 +2520,7 @@ figcaption,
 
 .breadcrumbs .trail-browse {
 	margin-right: 0.5em;
-	font-weight: normal;
+	font-weight: 400;
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
@@ -2529,35 +2531,35 @@ figcaption,
 
 .breadcrumbs .trail-items li::after {
 	padding: 0 0.5em;
-	content: "\00bb"; /* Raquo */
+	content: "»"; /* Raquo */
 }
 
 .trail-separator-slash .trail-items li::after {
-	content: "\002F";
+	content: "/";
 }
 
 .trail-separator-dash .trail-items li::after {
-	content: "\2013";
+	content: "–";
 }
 
 .trail-separator-bull .trail-items li::after {
-	content: "\2022";
+	content: "•";
 }
 
 .trail-separator-arrow-bracket .trail-items li::after {
-	content: "\003e";
+	content: ">";
 }
 
 .trail-separator-raquo .trail-items li::after {
-	content: "\00bb";
+	content: "»";
 }
 
 .trail-separator-single-arrow .trail-items li::after {
-	content: "\2192";
+	content: "→";
 }
 
 .trail-separator-double-arrow .trail-items li::after {
-	content: "\21D2";
+	content: "⇒";
 }
 
 .breadcrumbs .trail-items li:last-of-type::after {
@@ -2599,7 +2601,7 @@ figcaption,
 	margin: 0 1em 0 1em;
 	color: rgba(0, 0, 0, 0.15);
 	color: var(--medium-border-color);
-	content: "\007c";
+	content: "|";
 }
 
 .tz-magazine-block .tz-entry-meta .tz-meta-field:last-child::after {
@@ -2670,22 +2672,22 @@ ul.related-posts-list {
 }
 
 .related-posts-three-columns .related-post-column {
-	width: 33.3333333333333%;
+	width: 33.3333333333%;
 }
 
 .related-posts-four-columns .related-post-column {
 	width: 25%;
 }
 
-.related-posts-two-columns .related-post-column:nth-child(2n + 1) {
+.related-posts-two-columns .related-post-column:nth-child(2n+1) {
 	clear: left;
 }
 
-.related-posts-three-columns .related-post-column:nth-child(3n + 1) {
+.related-posts-three-columns .related-post-column:nth-child(3n+1) {
 	clear: left;
 }
 
-.related-posts-four-columns .related-post-column:nth-child(4n + 1) {
+.related-posts-four-columns .related-post-column:nth-child(4n+1) {
 	clear: left;
 }
 
@@ -2744,7 +2746,7 @@ ul.related-posts-list {
 		width: 50%;
 	}
 
-	.related-posts-four-columns .related-post-column:nth-child(2n + 1) {
+	.related-posts-four-columns .related-post-column:nth-child(2n+1) {
 		clear: left;
 	}
 
@@ -2946,7 +2948,7 @@ ul.related-posts-list {
 	color: #cc5555;
 	color: var(--button-color);
 	text-decoration: none;
-	font-weight: bold;
+	font-weight: 700;
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -3369,6 +3371,7 @@ ul.related-posts-list {
 # - Media Queries for Magazine Widgets
 --------------------------------------------------------------*/
 @media only screen and (max-width: 80em) {
+
 	/* Featured Posts */
 	.featured-posts-wrap {
 		margin-bottom: 2em;
@@ -3392,6 +3395,7 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 70em) {
+
 	/* Magazine Widgets */
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 22px;
@@ -3421,6 +3425,7 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 57.5em) {
+
 	/* Magazine Widgets */
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 24px;
@@ -3460,6 +3465,7 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 50em) {
+
 	/* Magazine Widgets */
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 22px;
@@ -3489,6 +3495,7 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 45em) {
+
 	/* Magazine Widgets */
 	.widget-magazine-posts .medium-post .entry-title {
 		font-size: 16px;
@@ -3502,6 +3509,7 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 40em) {
+
 	/* Magazine Widgets */
 	.widget-magazine-posts {
 		margin-bottom: -1.5em;
@@ -3600,6 +3608,7 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 30em) {
+
 	/* Magazine Widgets */
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 22px;
@@ -3628,6 +3637,7 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 25em) {
+
 	/* Magazine Widgets */
 	.widget-magazine-posts .medium-post .entry-title {
 		font-size: 16px;
@@ -3641,6 +3651,7 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 20em) {
+
 	/* Magazine Widgets */
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 20px;
@@ -3668,6 +3679,7 @@ ul.related-posts-list {
 # - Media Queries for Media
 --------------------------------------------------------------*/
 @media only screen and (max-width: 50em) {
+
 	/* Gallery */
 	.gallery-item {
 		padding: 0 1em 0.75em 0;

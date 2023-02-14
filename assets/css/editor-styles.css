@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*
  * Editor Styles
  *
@@ -99,9 +101,9 @@ body.block-editor-page .editor-post-title__block .editor-post-title__input {
 	color: var(--title-color);
 	font-size: 24px;
 	font-size: 1.5rem;
-	font-family: "Rambla", arial, helvetica, sans-serif;
+	font-family: Rambla, arial, helvetica, sans-serif;
 	font-family: var(--title-font);
-	font-weight: bold;
+	font-weight: 700;
 	font-weight: var(--title-font-weight);
 	text-transform: none;
 	text-transform: var(--title-text-transform);
@@ -153,7 +155,7 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 	color: var(--text-color);
 	font-size: 16px;
 	font-size: 1rem;
-	font-family: "Raleway", arial, helvetica, sans-serif;
+	font-family: Raleway, arial, helvetica, sans-serif;
 	font-family: var(--text-font);
 	line-height: 1.75;
 	line-height: var(--text-line-height);
@@ -310,7 +312,7 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 	display: block;
 	color: #303030;
 	color: var(--text-color);
-	font-family: "Raleway", arial, helvetica, sans-serif;
+	font-family: Raleway, arial, helvetica, sans-serif;
 	font-family: var(--text-font);
 	font-size: 16px;
 	font-size: 1rem;
@@ -320,7 +322,7 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 .wp-block-quote__citation::before,
 .wp-block-pullquote__citation::before,
 .wp-block-pullquote cite::before {
-	content: "\2014\00a0";
+	content: "— ";
 }
 
 .wp-block-pullquote:not(.is-style-solid-color) .wp-block-pullquote__citation {
@@ -370,7 +372,7 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 }
 
 .editor-styles-wrapper th {
-	font-weight: normal;
+	font-weight: 400;
 	text-align: initial;
 	background: rgba(0, 0, 0, 0.05);
 }
@@ -427,7 +429,7 @@ p.has-background {
 .has-drop-cap:not(:focus)::first-letter {
 	font-size: 4.5rem;
 	line-height: 0.7;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 /* Code Block */
@@ -509,7 +511,7 @@ p.has-background {
 	color: inherit;
 	font-size: inherit;
 	text-decoration: none;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .wp-block-button__link:link,
@@ -814,9 +816,9 @@ div.wp-block-columns {
 	color: var(--widget-title-color);
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-family: "Rambla", arial, helvetica, sans-serif;
+	font-family: Rambla, arial, helvetica, sans-serif;
 	font-family: var(--widget-title-font);
-	font-weight: normal;
+	font-weight: 400;
 	font-weight: var(--widget-title-font-weight);
 	text-transform: none;
 	text-transform: var(--widget-title-text-transform);
@@ -1009,7 +1011,7 @@ div.wp-block-columns {
 	margin: 0 1em 0 1em;
 	color: rgba(0, 0, 0, 0.15);
 	color: var(--medium-border-color);
-	content: "\007c";
+	content: "|";
 }
 
 .tz-magazine-block .tz-entry-meta .tz-meta-field:last-child::after {
@@ -1042,9 +1044,9 @@ div.wp-block-columns {
 	color: var(--title-color);
 	font-size: 24px;
 	font-size: 1.5rem;
-	font-family: "Rambla", arial, helvetica, sans-serif;
+	font-family: Rambla, arial, helvetica, sans-serif;
 	font-family: var(--title-font);
-	font-weight: bold;
+	font-weight: 700;
 	font-weight: var(--title-font-weight);
 	text-transform: none;
 	text-transform: var(--title-text-transform);
@@ -1089,7 +1091,7 @@ div.wp-block-columns {
 	margin: 0 1rem;
 	color: #999;
 	color: var(--light-text-color);
-	content: "\2013";
+	content: "–";
 }
 
 .edit-post-visual-editor .tz-magazine-block .tz-entry-meta > .tz-meta-field:last-child::after {
@@ -1146,7 +1148,7 @@ div.wp-block-columns {
 }
 
 .edit-post-visual-editor .tz-magazine-block .tz-more-link::after {
-	content: " \00BB";
+	content: " »";
 }
 
 @media only screen and (min-width: 960px) {
