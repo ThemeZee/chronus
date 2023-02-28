@@ -115,7 +115,7 @@ function chronus_magazine_posts_excerpt_length( $length ) {
 function chronus_get_magazine_post_ids( $cache_id, $category, $number_of_posts ) {
 
 	$cache_id = sanitize_key( $cache_id );
-	$post_ids = get_transient( 'chronus_magazine_post_ids' );
+	$post_ids = is_array( get_transient( 'chronus_magazine_post_ids' ) ) ? get_transient( 'chronus_magazine_post_ids' ) : array();
 
 	if ( ! isset( $post_ids[ $cache_id ] ) || is_customize_preview() ) {
 
