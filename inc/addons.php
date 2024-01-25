@@ -18,22 +18,31 @@ function chronus_theme_addons_setup() {
 	add_theme_support( 'themezee-mega-menu', array( 'primary', 'secondary' ) );
 
 	// Add theme support for Widget Bundle.
-	add_theme_support( 'themezee-widget-bundle', array(
-		'thumbnail_size' => array( 120, 80 ),
-		'svg_icons'      => true,
-	) );
+	add_theme_support(
+		'themezee-widget-bundle',
+		array(
+			'thumbnail_size' => array( 120, 80 ),
+			'svg_icons'      => true,
+		)
+	);
 
 	// Add theme support for Related Posts.
-	add_theme_support( 'themezee-related-posts', array(
-		'thumbnail_size' => array( 400, 250 ),
-	) );
+	add_theme_support(
+		'themezee-related-posts',
+		array(
+			'thumbnail_size' => array( 400, 250 ),
+		)
+	);
 
 	// Add theme support for Infinite Scroll.
-	add_theme_support( 'infinite-scroll', array(
-		'container'      => 'main',
-		'footer_widgets' => 'footer',
-		'render'         => 'chronus_infinite_scroll_render',
-	) );
+	add_theme_support(
+		'infinite-scroll',
+		array(
+			'container'      => 'main',
+			'footer_widgets' => 'footer',
+			'render'         => 'chronus_infinite_scroll_render',
+		)
+	);
 
 	// Add Theme Support for wooCommerce.
 	add_theme_support( 'woocommerce' );

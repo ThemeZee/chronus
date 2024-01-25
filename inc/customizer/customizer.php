@@ -6,22 +6,22 @@
  */
 
 // Load Sanitize Functions.
-require( get_template_directory() . '/inc/customizer/sanitize-functions.php' );
+require get_template_directory() . '/inc/customizer/sanitize-functions.php';
 
 // Load Custom Controls.
-require( get_template_directory() . '/inc/customizer/controls/category-dropdown-control.php' );
-require( get_template_directory() . '/inc/customizer/controls/headline-control.php' );
-require( get_template_directory() . '/inc/customizer/controls/links-control.php' );
-require( get_template_directory() . '/inc/customizer/controls/plugin-control.php' );
-require( get_template_directory() . '/inc/customizer/controls/upgrade-control.php' );
+require get_template_directory() . '/inc/customizer/controls/category-dropdown-control.php';
+require get_template_directory() . '/inc/customizer/controls/headline-control.php';
+require get_template_directory() . '/inc/customizer/controls/links-control.php';
+require get_template_directory() . '/inc/customizer/controls/plugin-control.php';
+require get_template_directory() . '/inc/customizer/controls/upgrade-control.php';
 
 // Load Customizer Sections.
-require( get_template_directory() . '/inc/customizer/sections/customizer-layout.php' );
-require( get_template_directory() . '/inc/customizer/sections/customizer-blog.php' );
-require( get_template_directory() . '/inc/customizer/sections/customizer-post.php' );
-require( get_template_directory() . '/inc/customizer/sections/customizer-featured.php' );
-require( get_template_directory() . '/inc/customizer/sections/customizer-info.php' );
-require( get_template_directory() . '/inc/customizer/sections/customizer-website.php' );
+require get_template_directory() . '/inc/customizer/sections/customizer-layout.php';
+require get_template_directory() . '/inc/customizer/sections/customizer-blog.php';
+require get_template_directory() . '/inc/customizer/sections/customizer-post.php';
+require get_template_directory() . '/inc/customizer/sections/customizer-featured.php';
+require get_template_directory() . '/inc/customizer/sections/customizer-info.php';
+require get_template_directory() . '/inc/customizer/sections/customizer-website.php';
 
 /**
  * Registers Theme Options panel and sets up some WordPress core settings
@@ -31,12 +31,15 @@ require( get_template_directory() . '/inc/customizer/sections/customizer-website
 function chronus_customize_register_options( $wp_customize ) {
 
 	// Add Theme Options Panel.
-	$wp_customize->add_panel( 'chronus_options_panel', array(
-		'priority'       => 180,
-		'capability'     => 'edit_theme_options',
-		'theme_supports' => '',
-		'title'          => esc_html__( 'Theme Options', 'chronus' ),
-	) );
+	$wp_customize->add_panel(
+		'chronus_options_panel',
+		array(
+			'priority'       => 180,
+			'capability'     => 'edit_theme_options',
+			'theme_supports' => '',
+			'title'          => esc_html__( 'Theme Options', 'chronus' ),
+		)
+	);
 
 	// Change default background section.
 	$wp_customize->get_control( 'background_color' )->section = 'background_image';

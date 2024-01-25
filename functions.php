@@ -24,7 +24,7 @@ if ( ! function_exists( 'chronus_setup' ) ) :
 	 */
 	function chronus_setup() {
 
-		// Make theme available for translation. Translations can be filed at https://translate.wordpress.org/projects/wp-themes/chronus
+		// Make theme available for translation. Translations can be filed at https://translate.wordpress.org/projects/wp-themes/chronus.
 		load_theme_textdomain( 'chronus', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
@@ -40,39 +40,62 @@ if ( ! function_exists( 'chronus_setup' ) ) :
 		set_post_thumbnail_size( 840, 525, true );
 
 		// Register Navigation Menus.
-		register_nav_menus( array(
-			'primary' => esc_html__( 'Main Navigation', 'chronus' ),
-		) );
+		register_nav_menus(
+			array(
+				'primary' => esc_html__( 'Main Navigation', 'chronus' ),
+			)
+		);
 
 		// Switch default core markup for search form, comment form, and comments to output valid HTML5.
-		add_theme_support( 'html5', array(
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'chronus_custom_background_args', array(
-			'default-color' => 'ffffff',
-		) ) );
+		add_theme_support(
+			'custom-background',
+			apply_filters(
+				'chronus_custom_background_args',
+				array(
+					'default-color' => 'ffffff',
+				)
+			)
+		);
 
 		// Set up the WordPress core custom logo feature.
-		add_theme_support( 'custom-logo', apply_filters( 'chronus_custom_logo_args', array(
-			'height'      => 60,
-			'width'       => 300,
-			'flex-height' => true,
-			'flex-width'  => true,
-		) ) );
+		add_theme_support(
+			'custom-logo',
+			apply_filters(
+				'chronus_custom_logo_args',
+				array(
+					'height'      => 60,
+					'width'       => 300,
+					'flex-height' => true,
+					'flex-width'  => true,
+				)
+			)
+		);
 
 		// Set up the WordPress core custom header feature.
-		add_theme_support( 'custom-header', apply_filters( 'chronus_custom_header_args', array(
-			'header-text' => false,
-			'width'       => 2560,
-			'height'      => 500,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) ) );
+		add_theme_support(
+			'custom-header',
+			apply_filters(
+				'chronus_custom_header_args',
+				array(
+					'header-text' => false,
+					'width'       => 2560,
+					'height'      => 500,
+					'flex-width'  => true,
+					'flex-height' => true,
+				)
+			)
+		);
 
 		// Add extra theme styling to the visual editor.
 		add_editor_style( array( 'assets/css/editor-style.css' ) );
@@ -106,25 +129,29 @@ add_action( 'after_setup_theme', 'chronus_content_width', 0 );
  */
 function chronus_widgets_init() {
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'chronus' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Appears on posts and pages except the full width template.', 'chronus' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title'   => '</h3></div>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Sidebar', 'chronus' ),
+			'id'            => 'sidebar-1',
+			'description'   => esc_html__( 'Appears on posts and pages except the full width template.', 'chronus' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+			'after_title'   => '</h3></div>',
+		)
+	);
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'Magazine Homepage', 'chronus' ),
-		'id'            => 'magazine-homepage',
-		'description'   => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'chronus' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title'   => '</h3></div>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Magazine Homepage', 'chronus' ),
+			'id'            => 'magazine-homepage',
+			'description'   => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'chronus' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+			'after_title'   => '</h3></div>',
+		)
+	);
 }
 add_action( 'widgets_init', 'chronus_widgets_init' );
 
@@ -168,8 +195,8 @@ add_action( 'wp_enqueue_scripts', 'chronus_scripts' );
 
 
 /**
-* Enqueue theme fonts.
-*/
+ * Enqueue theme fonts.
+ */
 function chronus_theme_fonts() {
 	$fonts_url = chronus_get_fonts_url();
 
@@ -219,11 +246,14 @@ add_action( 'after_setup_theme', 'chronus_add_image_sizes' );
  * Make custom image sizes available in Gutenberg.
  */
 function chronus_add_image_size_names( $sizes ) {
-	return array_merge( $sizes, array(
-		'post-thumbnail'          => esc_html__( 'Chronus Single Post', 'chronus' ),
-		'chronus-thumbnail-large' => esc_html__( 'Chronus Magazine Post', 'chronus' ),
-		'chronus-thumbnail-small' => esc_html__( 'Chronus Thumbnail', 'chronus' ),
-	) );
+	return array_merge(
+		$sizes,
+		array(
+			'post-thumbnail'          => esc_html__( 'Chronus Single Post', 'chronus' ),
+			'chronus-thumbnail-large' => esc_html__( 'Chronus Magazine Post', 'chronus' ),
+			'chronus-thumbnail-small' => esc_html__( 'Chronus Thumbnail', 'chronus' ),
+		)
+	);
 }
 add_filter( 'image_size_names_choose', 'chronus_add_image_size_names' );
 

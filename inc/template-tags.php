@@ -37,7 +37,7 @@ if ( ! function_exists( 'chronus_site_title' ) ) :
 
 			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
@@ -51,11 +51,12 @@ if ( ! function_exists( 'chronus_site_description' ) ) :
 
 		$description = get_bloginfo( 'description', 'display' ); /* WPCS: xss ok. */
 
-		if ( $description || is_customize_preview() ) : ?>
+		if ( $description || is_customize_preview() ) :
+			?>
 
 			<p class="site-description"><?php echo $description; ?></p>
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
@@ -67,7 +68,8 @@ if ( ! function_exists( 'chronus_header_image' ) ) :
 	 */
 	function chronus_header_image() {
 
-		if ( has_header_image() ) : ?>
+		if ( has_header_image() ) :
+			?>
 
 			<div id="headimg" class="header-image">
 
@@ -77,7 +79,7 @@ if ( ! function_exists( 'chronus_header_image' ) ) :
 
 			</div>
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
@@ -90,23 +92,28 @@ if ( ! function_exists( 'chronus_blog_title' ) ) :
 	function chronus_blog_title() {
 
 		// Get blog title and descripton from database.
-		$blog_title = chronus_get_option( 'blog_title' );
+		$blog_title       = chronus_get_option( 'blog_title' );
 		$blog_description = chronus_get_option( 'blog_description' );
 
 		// Display Blog Title.
-		if ( '' !== $blog_title || '' !== $blog_description || is_customize_preview() ) : ?>
+		if ( '' !== $blog_title || '' !== $blog_description || is_customize_preview() ) :
+			?>
 
 			<header class="page-header blog-header clearfix">
 
-				<?php // Display Blog Title.
-				if ( '' !== $blog_title || is_customize_preview() ) : ?>
+				<?php
+				// Display Blog Title.
+				if ( '' !== $blog_title || is_customize_preview() ) :
+					?>
 
 					<h1 class="archive-title blog-title"><?php echo wp_kses_post( $blog_title ); ?></h1>
 
-				<?php endif;
+					<?php
+				endif;
 
 				// Display Blog Description.
-				if ( '' !== $blog_description || is_customize_preview() ) : ?>
+				if ( '' !== $blog_description || is_customize_preview() ) :
+					?>
 
 					<p class="blog-description"><?php echo wp_kses_post( $blog_description ); ?></p>
 
@@ -114,7 +121,8 @@ if ( ! function_exists( 'chronus_blog_title' ) ) :
 
 			</header>
 
-		<?php endif;
+			<?php
+		endif;
 	}
 endif;
 
@@ -129,13 +137,14 @@ if ( ! function_exists( 'chronus_post_image' ) ) :
 	function chronus_post_image( $size = 'post-thumbnail', $attr = array() ) {
 
 		// Check if post has thumbnail.
-		if ( has_post_thumbnail() ) : ?>
+		if ( has_post_thumbnail() ) :
+			?>
 
 			<a class="wp-post-image-link" href="<?php the_permalink(); ?>" rel="bookmark">
 				<?php the_post_thumbnail( $size, $attr ); ?>
 			</a>
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
@@ -148,13 +157,14 @@ if ( ! function_exists( 'chronus_post_image_archives' ) ) :
 	function chronus_post_image_archives() {
 
 		// Display Post Thumbnail if activated.
-		if ( true === chronus_get_option( 'post_image_archives' ) && has_post_thumbnail() ) : ?>
+		if ( true === chronus_get_option( 'post_image_archives' ) && has_post_thumbnail() ) :
+			?>
 
 			<a class="wp-post-image-link" href="<?php the_permalink(); ?>" rel="bookmark">
 				<?php the_post_thumbnail( 'post-thumbnail' ); ?>
 			</a>
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
@@ -182,7 +192,7 @@ if ( ! function_exists( 'chronus_entry_meta' ) ) :
 	 */
 	function chronus_entry_meta() {
 
-		$postmeta = chronus_meta_date();
+		$postmeta  = chronus_meta_date();
 		$postmeta .= chronus_meta_author();
 		$postmeta .= chronus_meta_category();
 
@@ -197,7 +207,8 @@ if ( ! function_exists( 'chronus_meta_date' ) ) :
 	 */
 	function chronus_meta_date() {
 
-		$time_string = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>',
+		$time_string = sprintf(
+			'<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>',
 			esc_url( get_permalink() ),
 			esc_attr( get_the_time() ),
 			esc_attr( get_the_date( 'c' ) ),
@@ -217,7 +228,8 @@ if ( ! function_exists( 'chronus_meta_author' ) ) :
 	 */
 	function chronus_meta_author() {
 
-		$author_string = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
+		$author_string = sprintf(
+			'<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'chronus' ), get_the_author() ) ),
 			esc_html( get_the_author() )
@@ -257,7 +269,8 @@ if ( ! function_exists( 'chronus_entry_tags' ) ) :
 		$tag_list = get_the_tag_list( esc_html__( 'Tagged with ', 'chronus' ), ', ' );
 
 		// Display tags.
-		if ( $tag_list ) : ?>
+		if ( $tag_list ) :
+			?>
 
 			<div class="entry-tags clearfix">
 				<span class="meta-tags">
@@ -265,7 +278,7 @@ if ( ! function_exists( 'chronus_entry_tags' ) ) :
 				</span>
 			</div><!-- .entry-tags -->
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
@@ -281,11 +294,11 @@ if ( ! function_exists( 'chronus_more_link' ) ) :
 		$read_more = chronus_get_option( 'read_more_text' );
 
 		if ( '' !== $read_more || is_customize_preview() ) :
-		?>
+			?>
 
-			<a href="<?php echo esc_url( get_permalink() ) ?>" class="more-link"><?php echo esc_html( $read_more ); ?></a>
+			<a href="<?php echo esc_url( get_permalink() ); ?>" class="more-link"><?php echo esc_html( $read_more ); ?></a>
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
@@ -299,10 +312,12 @@ if ( ! function_exists( 'chronus_post_navigation' ) ) :
 
 		if ( true === chronus_get_option( 'post_navigation' ) || is_customize_preview() ) {
 
-			the_post_navigation( array(
-				'prev_text' => '<span class="nav-link-text">' . esc_html_x( 'Previous Post', 'post navigation', 'chronus' ) . '</span><h3 class="entry-title">%title</h3>',
-				'next_text' => '<span class="nav-link-text">' . esc_html_x( 'Next Post', 'post navigation', 'chronus' ) . '</span><h3 class="entry-title">%title</h3>',
-			) );
+			the_post_navigation(
+				array(
+					'prev_text' => '<span class="nav-link-text">' . esc_html_x( 'Previous Post', 'post navigation', 'chronus' ) . '</span><h3 class="entry-title">%title</h3>',
+					'next_text' => '<span class="nav-link-text">' . esc_html_x( 'Next Post', 'post navigation', 'chronus' ) . '</span><h3 class="entry-title">%title</h3>',
+				)
+			);
 
 		}
 	}
@@ -317,10 +332,12 @@ if ( ! function_exists( 'chronus_breadcrumbs' ) ) :
 
 		if ( function_exists( 'themezee_breadcrumbs' ) ) {
 
-			themezee_breadcrumbs( array(
-				'before' => '<div class="breadcrumbs-container container clearfix">',
-				'after' => '</div>',
-			) );
+			themezee_breadcrumbs(
+				array(
+					'before' => '<div class="breadcrumbs-container container clearfix">',
+					'after'  => '</div>',
+				)
+			);
 
 		}
 	}
@@ -335,11 +352,13 @@ if ( ! function_exists( 'chronus_related_posts' ) ) :
 
 		if ( function_exists( 'themezee_related_posts' ) ) {
 
-			themezee_related_posts( array(
-				'class' => 'related-posts type-page clearfix',
-				'before_title' => '<h2 class="archive-title related-posts-title">',
-				'after_title' => '</h2>',
-			) );
+			themezee_related_posts(
+				array(
+					'class'        => 'related-posts type-page clearfix',
+					'before_title' => '<h2 class="archive-title related-posts-title">',
+					'after_title'  => '</h2>',
+				)
+			);
 
 		}
 	}
@@ -352,11 +371,13 @@ if ( ! function_exists( 'chronus_pagination' ) ) :
 	 */
 	function chronus_pagination() {
 
-		the_posts_pagination( array(
-			'mid_size'  => 2,
-			'prev_text' => '&laquo;<span class="screen-reader-text">' . esc_html_x( 'Previous Posts', 'pagination', 'chronus' ) . '</span>',
-			'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Posts', 'pagination', 'chronus' ) . '</span>&raquo;',
-		) );
+		the_posts_pagination(
+			array(
+				'mid_size'  => 2,
+				'prev_text' => '&laquo;<span class="screen-reader-text">' . esc_html_x( 'Previous Posts', 'pagination', 'chronus' ) . '</span>',
+				'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Posts', 'pagination', 'chronus' ) . '</span>&raquo;',
+			)
+		);
 
 	}
 endif;
@@ -372,7 +393,8 @@ function chronus_credit_link() {
 		<span class="credit-link">
 			<?php
 			// translators: Theme Name and Link to ThemeZee.
-			printf( esc_html__( 'WordPress Theme: %1$s by %2$s.', 'chronus' ),
+			printf(
+				esc_html__( 'WordPress Theme: %1$s by %2$s.', 'chronus' ),
 				esc_html__( 'Chronus', 'chronus' ),
 				'ThemeZee'
 			);

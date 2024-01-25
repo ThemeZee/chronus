@@ -147,10 +147,15 @@ function chronus_theme_info_page() {
 
 		<div id="theme-author">
 
-			<p><?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'chronus' ),
+			<p>
+			<?php
+			printf(
+				esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'chronus' ),
 				$theme->display( 'Name' ),
 				'<a target="_blank" href="' . __( 'https://themezee.com/', 'chronus' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=chronus" title="ThemeZee">ThemeZee</a>',
-				'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/chronus/reviews/', 'chronus' ) . '" title="' . esc_attr__( 'Review Chronus', 'chronus' ) . '">' . esc_html__( 'rate it', 'chronus' ) . '</a>'); ?>
+				'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/chronus/reviews/', 'chronus' ) . '" title="' . esc_attr__( 'Review Chronus', 'chronus' ) . '">' . esc_html__( 'rate it', 'chronus' ) . '</a>'
+			);
+			?>
 			</p>
 
 		</div>

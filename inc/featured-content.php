@@ -9,10 +9,9 @@
  * @package Chronus
  */
 
-
 /**
-* Display Featured Content Area
-*/
+ * Display Featured Content Area
+ */
 function chronus_featured_content() {
 
 	// Display post slider only if activated.
@@ -60,7 +59,8 @@ if ( ! function_exists( 'chronus_featured_post_image' ) ) :
 				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/default-featured-image.png" class="featured-image default-featured-image wp-post-image" />
 			</a>
 
-		<?php endif;
+			<?php
+		endif;
 	}
 endif;
 
@@ -71,7 +71,7 @@ if ( ! function_exists( 'chronus_featured_entry_meta' ) ) :
 	 */
 	function chronus_featured_entry_meta() {
 
-		$postmeta = chronus_meta_date();
+		$postmeta  = chronus_meta_date();
 		$postmeta .= chronus_meta_author();
 
 		echo '<div class="entry-meta">' . $postmeta . '</div>';

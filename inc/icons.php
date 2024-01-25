@@ -18,7 +18,7 @@ function chronus_get_svg( $icon = null ) {
 	}
 
 	// Create SVG markup.
-	$svg = '<svg class="icon icon-' . esc_attr( $icon ) . '" aria-hidden="true" role="img">';
+	$svg  = '<svg class="icon icon-' . esc_attr( $icon ) . '" aria-hidden="true" role="img">';
 	$svg .= ' <use xlink:href="' . get_parent_theme_file_uri( '/assets/icons/genericons-neue.svg#' ) . esc_html( $icon ) . '"></use> ';
 	$svg .= '</svg>';
 
